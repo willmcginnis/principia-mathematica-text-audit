@@ -234,6 +234,7 @@ scripts/          the code for the Vol I and Vol II pipeline (see scripts/README
 ## How to cite
 
 > Will McGinnis, *Principia Mathematica text audit: errata tracker*, first public draft, 2026-10-04.
+> https://github.com/willmcginnis/principia-mathematica-text-audit
 
 Because everything here will change, please cite a specific commit.
 
