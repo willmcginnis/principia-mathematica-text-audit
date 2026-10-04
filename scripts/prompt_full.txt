@@ -1,0 +1,9 @@
+This image is one page of Whitehead & Russell, Principia Mathematica vol. I (1910). Transcribe the ENTIRE page exactly as printed:
+- all running text, displayed formulas, and footnotes (put footnotes last, each starting with its marker such as * or †);
+- omit only the running head and the page number;
+- join words hyphenated across a line break (write "symmetrical", not "sym-metrical"), but keep real hyphens;
+- wrap every mathematical expression, including single letters used as symbols, in $...$, written in Unicode: ⊢ ⊃ ⊂ ≡ ∨ ∼ ∃ ε ι ℩ Λ φ ψ χ θ x̂ ẑ ! and keep Russell's dots (. : :. ::) exactly;
+- keep italics as plain text; keep every comma, bracket and quotation mark as printed;
+- this copy has some handwritten corrections in ink: IGNORE all handwriting and transcribe only the printed type;
+- reproduce what is printed even if it looks wrong. Do not correct, complete, or modernize anything.
+Output only the transcription as plain text.
