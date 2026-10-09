@@ -7,9 +7,10 @@ A blind human review of a stratified sample is in progress and will give a measu
 pipeline list (see the [README](../README.md#human-review)). Expect some rows to be wrong and the list to
 change.
 
-Total: **154 candidates** = 147 spans on 123 printed pages from the pipeline (section 3), plus 7 further
-candidate discrepancies on pages that carry a published erratum (section 2). A further 68 rows that the
-pipeline produced were classified as comparison artefacts and set aside (section 4).
+Total: **156 candidates** = 149 spans on 125 printed pages from the pipeline (section 3), plus 7 further
+candidate discrepancies on pages that carry a published erratum (section 2). A further 73 judged rows are set
+aside: 68 that the pipeline produced were classified as comparison artefacts (section 4), and 5 follow-up rows
+were rejected by the judges (section 5).
 
 ## 1. Published errata that Gutenberg appears not to have applied (awaiting human review)
 
@@ -46,7 +47,7 @@ typography difference, and all 10 are set aside.
 | S6 | 101 | `.` | `=` | *112·17: the models read the print as ΣNc‘κ = ΣNc‘λ; Gutenberg has a dot. The erratum concerns *112·23. |
 | S7 | 101 | `ᗡ"` | `Rl` | *112·17 Dem.: the models read the print as ∩ Rl‘sm; Gutenberg has ᗡ“‘sm. The erratum concerns *112·23. Same pattern as six section 3 rows (see the note there). |
 
-## 3. Pipeline candidates (147 spans on 123 pages)
+## 3. Pipeline candidates (149 spans on 125 pages)
 
 Each row here has two blind machine readings of the 1912 page that agree with each other and differ from
 Gutenberg's text. Both model judges (Claude Opus and Codex), shown the page image and the two readings
@@ -218,6 +219,16 @@ some may be correct as they stand.
 | 146 | 761 | `ε` | `⊃` | `.*22.41]⊃.P'x=PRscQ:【ε】⊢.Prop*234.162.⊢:Ppo` |
 | 147 | 765 | `P` | `R` | `202.⊃⊢:Hp.⊃.os(P,Q)'【P】ε1∪2(1)⊢.(1).*234.24` |
 
+**Follow-up rows (judged 2026-10-08).** Comparing the 17 pages affected by the renderer fix again (section 4)
+exposed 6 reader-agreed hunks that had never been judged, and the set-aside p. 497 row hid a seventh possible
+slip. Both judges ran on all 7. They both picked the print on these 2, which are kept and numbered after the
+others; the other 5 are in section 5. Like every row here, both await human review.
+
+| # | Page | Gutenberg reads | Model-proposed print reading | Context (Gutenberg) |
+|---|---|---|---|---|
+| 148 | 191 | `⊢` | `⊣` | `ndlessthany,whileP(x【⊢】y)willbethesenumbers` |
+| 149 | 225 | `*` | `.` | `26]⊃.Nc'ρ<Nc'σ:[*100【*】321]⊃:ρsmξ.ρ⊂σ.∃!σ-ρ` |
+
 ## 4. Set aside: classified as comparison artefacts (68 rows)
 
 These rows passed both judges but were classified as artefacts of the comparison, not differences in the
@@ -235,7 +246,7 @@ page images by Claude.
   and found again (similarity ≥ 0.85) at the end of the previous page's reading or the start of the next
   page's Gutenberg text. 48 rows meet this rule. The other 3 (pp. 3, 308, 497) were decided by Claude looking at
   the page images. The p. 497 row also contains Gutenberg's `*183-26` with a hyphen where the readers have
-  ✱183·26 with a centred dot. That is a separate possible slip, and it has not been judged on its own.
+  ✱183·26 with a centred dot. That separate possible slip was judged on its own on 2026-10-08 and set aside (section 5).
 - **LaTeX left in the comparison stream (10 rows).** A bug in the comparator's HTML rendering let a `<`
   inside a formula swallow text up to the next `>`, leaving fragments such as `[beginalign`, `[l` and
   `upharpoonright`, or stray brackets. When the pages are compared again with the fixed renderer, these 10
@@ -326,3 +337,17 @@ page images by Claude.
 | 613 | page-marker placement | Gutenberg only | `D'(Pε∩I).` |
 | 702 | page-marker placement | Gutenberg only | `*216.1.⊢:xεδp'α.≡.(∃β).β⊂α∩C'P.∃!β.xlt…` |
 | 750 | page-marker placement | Gutenberg only | `Dem.⊢.*232.352.⊃⊢:Hp.xε(PRQ)sc'α.⊃.x=(…` |
+
+## 5. Set aside: follow-up rows rejected by the judges (5 rows)
+
+Of the 7 follow-up rows (see the end of section 3), these 5 were set aside because the two judges did not
+both pick the print. Each row in the private data records both picks, the A/B order, the date and a reason.
+Like every row here, they await human review.
+
+| Page | What differs | Picks | Reason set aside |
+|---|---|---|---|
+| 179 | the printer's signature mark `12-2`, print only | Opus Gutenberg, Codex neither | signature marks are omitted by Gutenberg on purpose |
+| 227 | the printer's signature mark `15-2`, print only | both Gutenberg | signature marks are omitted by Gutenberg on purpose |
+| 275 | a paragraph at the page edge, plus the signature mark `18-2` (print only) | both Gutenberg | Gutenberg places the paragraph at the top of p. 276 |
+| 558 | a `<br>` left in Gutenberg's TeX | Opus print, Codex neither | only one judge picked the print |
+| 497 | Gutenberg's `*183-26` (hyphen) where the readers have ✱183·26 | Opus print, Codex neither | only one judge picked the print (Codex saw the centred dot but did not accept "." for it) |

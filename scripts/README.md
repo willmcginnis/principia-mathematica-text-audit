@@ -21,6 +21,22 @@ the human-review tooling, which is still in use; and the scripts of the earlier 
 
 ## Known gaps: the scripts do not run end to end from this repository
 
+**Vol II follow-up step not included yet.** `vol2_split_artefacts.py` has the comparison-artefact rules (the 68
+rows) only. It does not include the follow-up step of 2026-10-08: the p. 497 row (the script's comments still
+call it "held for follow-up") and the 7 follow-up rows, including the 5 set aside as rejected by the judges
+(METHODOLOGY §4.5). The script that selected and judged those rows is not public yet. Cleaned-up versions of
+both will be published later. Until then the 73 set-aside rows and the 149 kept spans cannot be reproduced
+from this repository alone.
+
+**Vol I proposition labels.** `body_final.py` assigns each body row to the last proposition cited before it,
+which is not always the proposition the row belongs to. The ✱4·42 row on p. 124 was filed under ✱2·11 that
+way and relabelled by hand; re-running this `body_final.py` brings back the ✱2·11 label. Other labels may be
+wrong too.
+
+**Vol I triage fix not included yet.** The 2026-10-09 fix to the inverted-D test in `body_triage.py` (the
+reading must be non-empty) is not in this copy (METHODOLOGY §7). The follow-up of the 1,024 single-reading
+hunks is not public yet either.
+
 **Inputs not included.** Download the Gutenberg HTML (#78050, #78255) and the Wikimedia Commons DjVu files
 yourself (`fetch_vol1_pages.sh` gets the Vol I page images). Pipeline intermediates that the scripts read are
 not shipped either:

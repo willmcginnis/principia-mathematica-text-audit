@@ -3,7 +3,8 @@
 **Status: awaiting human review. Nothing on this page has been sent to Project Gutenberg.** This page lists
 all 102 entries of the draft. 80 are in the draft report and 22 are held back. So far they have been checked
 by AI models only. All 102 are now loaded on a private review page, where a person is checking each entry
-against the scan. No answers have been recorded yet. Nothing goes to Project Gutenberg until that check is
+against the scan. The same check also has 9 draft additions that are not in the report: ✱4·42 (section 4)
+and the 8 candidates of section 5. No answers have been recorded yet. Nothing goes to Project Gutenberg until that check is
 finished. Until then every entry is provisional and may
 change or be dropped. The report's own introduction below says how each entry was checked, and
 [METHODOLOGY.md](../METHODOLOGY.md) has the details. These entries are separate from the human precision
@@ -17,7 +18,10 @@ Each entry has one of two statuses:
   weaker, for the reason given. The human check decides whether it joins the report.
 
 Further Vol I candidates from the full-page pass (Introduction and body) are not on this page. They are also
-awaiting human review (see the [README](../README.md)).
+awaiting human review (see the [README](../README.md)). There are two exceptions. Section 4 has ✱4·42, a body row
+that the Lean replay found again independently. It is one of the 215 body rows, not an additional candidate,
+and it is not one of the 102 entries. Section 5 has 8 new candidates from the follow-up of the body pages
+that had no second reading (2026-10-09). They are not among the 102 entries either.
 
 ## 1. Status of all 102 entries
 
@@ -604,4 +608,78 @@ H22 (draft entry 80). *70·481, p. 443, images/5021.svg
 \equiv.\text{D}ʻ\overrightarrow{R}\subset\beta
 \overrightarrow{R} ==> \overleftarrow{R}
 Status: held back — awaiting human check (breve or arrow only (right vs left arrow), no close-up or two-judge check yet)
+```
+
+## 4. Found by the Lean replay — awaiting human check
+
+The Lean replay of ✱1–✱5 (see the [README](../README.md#lean-formalization)) independently re-found this
+candidate. It is not new: the full-page pass had already found it, and it is one of the 215 Vol I body rows
+(first filed there under ✱2·11, because the labelling script takes the last proposition cited before a row;
+the label was corrected by hand, and other labels may be wrong too). It is listed here because it never
+reached the draft report. It is not counted as a further candidate and is not one of the 102 entries above.
+It has now been drafted as an addition to the draft report (not yet in the report itself) and is loaded on
+the private review page as an addition to the report check; no answer is recorded yet. Its entry in Gutenberg's errata format is
+not on this page yet.
+
+- **✱4·42, p. 124, images/1032.svg** (scan image: DjVu page 146 of the Commons Vol I scan). *Dem.*, line (2).
+  - **Print (1910):** `⊢ . ✱3·26 .   ⊃ ⊢ : p . q ∨ ∼q . ⊃ . p   (2)`. Line (2) cites ✱3·26.
+  - **Ebook (#78050):** the same line, but its citation cell is empty: `⊢ . ✱3·26 .` is missing.
+  - No published erratum touches p. 124 (neither the Vol I list nor the additional errata printed in Vols II
+    and III), so this is not an applied erratum. The 1925 second edition has not been checked.
+  - Status: candidate — awaiting human check. Read from a close-up crop of the scan; no person has checked it
+    yet.
+
+## 5. New candidates from the body follow-up (2026-10-09) — awaiting human check
+
+These 8 come from the follow-up of the 1,024 single-reading hunks on 109 body pages that had no second reading
+(see the [README](../README.md) and [METHODOLOGY.md §7](../METHODOLOGY.md#7-limitations)). Each had one blind
+reading, then two independent model judges both picked the scan reading. That is weaker support than the 215
+body rows, which also had a second blind reading. Claude then looked at the scan crop of each one; no person has
+checked any of them. They are not among the 102 entries above. They are loaded on the private review page as
+additions to the report check; no answers are recorded yet. They are
+written in the same format as sections 2 and 3, and each context line occurs exactly once in the HTML file.
+Six are the same pattern in ✱84: the print has "Cls ex² excl" where the ebook has "Cls² excl". The ebook's own
+✱84·03 then reads "Cls² excl = Cls² excl − ∈ʻΛ Df", which is circular (that definition is draft report entry
+69). N7 changes only the punctuation of a subscript, a class that machine readers often get wrong.
+
+```text
+N1. *43·31, p. 341, images/3730.svg
+\vdash.\text{(1).(2).*35·45}.&amp;\supset\vdash.\text{Prop}
+\text{(1).(2).*35·45} ==> \text{(1).(2).*35·452}
+Status: candidate — awaiting human check (last Dem. line of *43·31: the print cites *35·452)
+
+N2. *84·241, p. 541, images/6171.svg
+\vdash.\iotaʻʻ\alpha\in \text{Cls}^2\, \text{excl}
+\text{Cls}^2 ==> \text{Cls ex}^2
+Status: candidate — awaiting human check (summary list on p. 541; the ebook has "Cls ex² excl" for *84·241 on p. 543)
+
+N3. *84·13, p. 542, images/6192.svg
+\vdash:\kappa\in \text{Cls}^2\,\text{excl}.&amp;\equiv.\kappa\in
+\text{Cls}^2 ==> \text{Cls ex}^2
+Status: candidate — awaiting human check (Dem. of *84·13, second line; only the first Cls² on the line; the headline is report entry 70)
+
+N4. *84·134, p. 542, images/6196.svg
+\vdash\colon\colon \kappa\in \text{Cls}^2\,\text{excl}.\equiv\colon\ldotp \alpha,\,\beta\in \kappa.\supset_{\alpha,\beta}:\exists
+\text{Cls}^2 ==> \text{Cls ex}^2
+Status: candidate — awaiting human check (headline of *84·134)
+
+N5. *84·134, p. 542, images/6197.svg
+\vdash.\text{(1).(2).*84·133}.&amp;\supset\vdash\colon\colon \kappa\in \text{Cls}^2\,\text{excl}.\equiv\colon\ldotp
+\text{Cls}^2 ==> \text{Cls ex}^2
+Status: candidate — awaiting human check (Dem. of *84·134, the line citing (1), (2) and *84·133)
+
+N6. *84·135, p. 542, images/6199.svg
+\vdash\colon\colon \kappa\in \text{Cls}^2\,\text{excl}.&amp;\equiv\colon\ldotp \alpha,\beta\in \kappa.\exists !\alpha\cap \beta
+\text{Cls}^2 ==> \text{Cls ex}^2
+Status: candidate — awaiting human check (Dem. of *84·135, second line; the headline is report entry 74)
+
+N7. *84·135, p. 542, images/6199.svg
+\alpha,\beta\in \kappa.\alpha=\beta.\supset_{\alpha.\beta}.\exists !\alpha\cap \beta
+\supset_{\alpha.\beta} ==> \supset_{\alpha,\beta}
+Status: candidate — awaiting human check (Dem. of *84·135, third line: the subscript is printed "α, β" with a comma; punctuation only)
+
+N8. *84·35, p. 545, images/6231.svg
+\vdash\colon\ldotp \kappa\in \text{Cls}^{2}\,\text{excl}.\supset:R\in {\in}_{\Delta}ʻ\kappa.\equiv.R\in
+\text{Cls}^{2} ==> \text{Cls ex}^{2}
+Status: candidate — awaiting human check (headline of *84·35)
 ```
