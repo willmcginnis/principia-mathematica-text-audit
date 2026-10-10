@@ -51,7 +51,8 @@ def blind(a, b):
 # ⇷ (Gutenberg's leftward arrow with a stroke) is mapped to ↦ in SETASIDE, and readers write it ←+; Gutenberg's ʻʻ
 # double inverted comma arrives as '' and readers write "; Gutenberg's ↓_{.,} subscript dots vs a combining diaeresis
 # below; a lone combining mark (dotted operators: SUB strips U+0307 but not U+0308). Used by vol2_split_artefacts.py;
-# not yet part of blind(), so earlier Vol I and Vol III counts are unchanged until those comparisons are re-run.
+# not yet part of blind(), so the Vol I counts are unchanged until that comparison is re-run; the Vol III artefact
+# review applies it.
 NOTATION = {frozenset(x) for x in [("↦", "←+"), ("''", '"'), (".,", "̤")]}
 def notation(a, b):
     if frozenset((a, b)) in NOTATION: return True

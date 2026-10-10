@@ -1,8 +1,8 @@
 # Principia Mathematica text audit: errata tracker
 
-> **Work in progress — awaiting human review.** No person has checked any count, candidate or report entry
-> here yet. Everything below is a model-pipeline output and is awaiting human review. Nothing has been reported
-> upstream.
+> **Work in progress — awaiting human review.** The human check has started on a small first batch and is in
+> progress; no result from it is used here yet. Everything below is a model-pipeline output and is awaiting human
+> review. Nothing has been reported upstream.
 
 This project checks the digital texts of Whitehead & Russell's *Principia Mathematica* (first edition,
 1910–1913) against page images of the printed books. Project Gutenberg published Volume I (#78050) and
@@ -20,10 +20,10 @@ maintain the texts. This repository tracks what has been found so far.
 
 | | Blind scan reading | Model judging | Published-errata filter | Human review | Reported upstream | Public list here |
 |---|---|---|---|---|---|---|
-| **Vol I** (Gutenberg #78050), body and drafted report | 🟡 2nd reading missing on 110 of 536 pages (109 of them carry 1,024 hunks); 5 pages not compared | 🟡 215 body rows pass both judges; of the 1,024 single-reading hunks, the 39 queued by triage were judged (2026-10-08/09): 8 new candidates | 🟡 automatic matcher only; known gaps | 🟡 all 102 report entries loaded on the review page and being checked against the scan; the 8 new candidates and ✱4·42 loaded as 9 additions to that check; body sample loaded; no answers recorded yet | ⬜ not sent (80 in draft report, 22 held back) | 🟡 all 102 report entries and the 8 new candidates listed, each awaiting human review; other candidates counts only |
+| **Vol I** (Gutenberg #78050), body and drafted report | 🟡 2nd reading missing on 110 of 536 pages (109 of them carry 1,024 hunks); 5 pages not compared | 🟡 215 body rows pass both judges; of the 1,024 single-reading hunks, 155 have been judged by both models (2026-10-08/10): 10 new candidates | 🟡 automatic matcher only; known gaps | 🟡 all 102 report entries loaded on the review page; the 10 new candidates and ✱4·42 loaded as 11 additions to that check; body sample loaded; the human check has started on a small first batch and is in progress | ⬜ not sent (80 in draft report, 22 held back) | 🟡 all 102 report entries and the 10 new candidates listed, each awaiting human review; other candidates counts only |
 | **Vol I Introduction** (pp. 1–88) | 🟡 2nd reader (Opus) on 44 of 88 pages | 🟡 Opus only (53 rows), no veto | 🟡 automatic matcher only; known gaps | 🟡 in sample, in progress; no results yet | ⬜ not reported | ⬜ count only |
-| **Vol II** (Gutenberg #78255) | ✅ all 816 pages, both readings | ✅ both judges done, including the 7 follow-up rows judged on 2026-10-08 (2 kept, 5 set aside) | 🟡 17 rows classified by Claude; 3 apparently unapplied errata, awaiting confirmation | 🟡 sample loaded (14 items withdrawn and replaced); in progress; no answers recorded yet | ⬜ not reported (156 candidates, 3 errata) | ✅ full list, all rows awaiting human review |
-| **Vol III** (DP, in progress) | ✅ all 512 images, both readings | 🟡 194 spans pass both judges; artefact review not yet run; pp. 1–249 selection to re-check | ⬜ our filter against Vol III's printed errata (pp. ix–x) not yet run | 🟡 in sample, in progress; no results yet | ⬜ not yet; will go to DP through their process | — counts only (DP text unpublished) |
+| **Vol II** (Gutenberg #78255) | ✅ all 816 pages, both readings | ✅ both judges done, including the 7 follow-up rows judged on 2026-10-08 (2 kept, 5 set aside) | 🟡 17 rows classified by Claude; 3 apparently unapplied errata, awaiting confirmation | 🟡 sample loaded (14 items withdrawn and replaced); in progress | ⬜ not reported (156 candidates, 3 errata) | ✅ full list, all rows awaiting human review |
+| **Vol III** (DP, in progress) | ✅ all 512 images, both readings | 🟡 194 spans pass both judges; after the artefact review, 161 kept on 111 DP pages and 33 set aside with reasons | 🟡 checked against the Errata to Vol III (pp. ix–x) by Claude, not by a person: none of the rows is an already-printed erratum | 🟡 in sample, in progress; no results yet | ⬜ not yet; will go to DP through their process | — counts only (DP text unpublished) |
 | **Lean formalization (✱1–✱5)** | — statements read from the 1910 scan | — proofs checked by Lean, not judged | — | — | ⬜ not sent: ✱1·4 (Vol I draft entry 1) and ✱4·42 (already one of the 215 Vol I body rows) | 🟡 summary only; ✱4·42 in [errata/vol1.md §4](errata/vol1.md#4-found-by-the-lean-replay--awaiting-human-check); Lean repo not yet published |
 
 ✅ done · 🟡 partial / in progress · ⬜ not started · — not applicable
@@ -37,19 +37,19 @@ awaiting human check. The results become verifiable once that repository is publ
 ## Status
 
 Counts are pipeline outputs. A **candidate** is a row that passed the automated checks described for its
-volume below. **No candidate or report entry has been confirmed by a person yet; all are awaiting human
-review.** The pipeline stages overlap, so the counts within a volume are **not** added together. Terms are
+volume below. **No result of the human check is used here yet; every candidate and report entry is awaiting
+human review.** The pipeline stages overlap, so the counts within a volume are **not** added together. Terms are
 defined in the [glossary](#glossary).
 
 ### Volume I: 1910 print, Gutenberg #78050
 
 | | |
 |---|---|
-| Drafted report | **102 entries, all awaiting human review**: 80 in the draft report and 22 held back. [errata/vol1.md](errata/vol1.md) lists every one with its status, in Gutenberg's preferred errata layout (one held-back entry, H18, still needs a unique context). They come from the proposition pass, proof replay and an extended scan check over ✱31–✱97. The 22 held-back entries have weaker model support. 20 change only marks that machine readers often get wrong (dots, E! for ∃!, breves and arrows, the inverted D) and have had neither a close-up crop check nor a later pick of the print by both full-page judges. In 1 the forced-choice judge answered "neither". 1 (a missing ✱ in a label) has had no dedicated scan check. All 102 are loaded on a private review page, where a person is checking each one against the scan; no answers are recorded yet. Nothing is sent to Project Gutenberg until that check is finished. |
+| Drafted report | **102 entries, all awaiting human review**: 80 in the draft report and 22 held back. [errata/vol1.md](errata/vol1.md) lists every one with its status, in Gutenberg's preferred errata layout (one held-back entry, H18, still needs a unique context). They come from the proposition pass, proof replay and an extended scan check over ✱31–✱97. The 22 held-back entries have weaker model support. 20 change only marks that machine readers often get wrong (dots, E! for ∃!, breves and arrows, the inverted D). 19 of them have had neither a close-up crop check nor a later pick of the print by both full-page judges; the 20th (H21) has since been picked as the print by both judges and looked at in a scan crop by Claude, not yet by a person, and stays held back. In 1 the forced-choice judge answered "neither". 1 (a missing ✱ in a label) has had no dedicated scan check. All 102 are loaded on a private review page, where a person will check each one against the scan; that check has started on a small first batch and is in progress. Nothing is sent to Project Gutenberg until that check is finished. |
 | Full-page pass, body (pp. 89–666) | **215** substantive candidate rows on 163 identified propositions (27 rows not attributed to a proposition). Each has two blind Codex readings that agree against Gutenberg; both judges (Opus, then the Codex veto) picked the print. 50 of the 215 are on propositions already in the earlier lists (independent re-discovery). Both counts rest on proposition labels assigned by `body_final.py`, which takes the last proposition cited before the row, not always the one the row belongs to: ✱4·42 was filed under ✱2·11 that way and corrected by hand, other labels may be wrong too, and re-running the public `body_final.py` brings back the ✱2·11 label. Also 74 dot-only and 39 number-dot rows (low priority). **Coverage gap:** Reader 1 differed from Gutenberg on 536 comparable pages. Reader 2 was attempted on 433 of them and succeeded on 426. That leaves 110 pages without a second reading. 109 of them carry 1,024 Reader-1 hunks, which have one reading only (see the follow-up below); the 110th has only a hunk matched to a published erratum. 5 further pages had no Gutenberg page marker to split on, so they were not compared at all. |
-| Body follow-up, single-reading pages (2026-10-08/09) | **8 new candidates, awaiting human check.** The 1,024 single-reading hunks on 109 pages went through the same triage as the body pass: 292 dropped as formatting, 654 set aside in blind-spot classes and 39 long alignment blocks dropped, so 985 were not queued. Both model judges ran on the other 39 (on 7 pages): 16 kept, 23 rejected. (A triage fix made later changes these counts to 651, 40 and 41. The 2 newly queued rows are page-marker placements, so the 8 candidates are unchanged. Counting the blind-spot sample below, 79 of the 1,024 have had both judges and 945 have had no judge; [METHODOLOGY §7](METHODOLOGY.md#7-limitations).) Of the 16, 7 are already in the draft report and 1 is page-marker placement, not a text error. The other **8 are new candidates**, listed in [errata/vol1.md §5](errata/vol1.md#5-new-candidates-from-the-body-follow-up-2026-10-09--awaiting-human-check). 6 of them are "Cls ex² excl" in ✱84, where the ebook drops "ex". They had one blind reading plus two judges, which is weaker support than the 215 body rows. They are loaded on the private review page as additions to the report check; no answers are recorded yet. ✱4·42 (below) is a body row, not one of these. A two-judge sample of 40 of the 654 blind-spot rows found nothing new ([METHODOLOGY §7](METHODOLOGY.md#7-limitations)). |
+| Body follow-up, single-reading pages (2026-10-08/10) | **8 new candidates, awaiting human check.** The 1,024 single-reading hunks on 109 pages went through the same triage as the body pass: 292 dropped as formatting, 654 set aside in blind-spot classes and 39 long alignment blocks dropped, so 985 were not queued. Both model judges ran on the other 39 (on 7 pages): 16 kept, 23 rejected. (A triage fix made later changes these counts to 651, 40 and 41. The 2 newly queued rows are page-marker placements, so the 8 candidates are unchanged; [METHODOLOGY §7](METHODOLOGY.md#7-limitations).) Of the 16, 7 are already in the draft report and 1 is page-marker placement, not a text error. The other **8 are new candidates**, listed in [errata/vol1.md §5](errata/vol1.md#5-new-candidates-from-the-body-follow-up-2026-10-09--awaiting-human-check). 6 of them are "Cls ex² excl" in ✱84, where the ebook drops "ex". They had one blind reading plus two judges, which is weaker support than the 215 body rows. They are loaded on the private review page as additions to the report check, awaiting human check. ✱4·42 (below) is a body row, not one of these. A two-judge sample of 40 of the 654 blind-spot rows found nothing new ([METHODOLOGY §7](METHODOLOGY.md#7-limitations)). **2 more new candidates (2026-10-10), awaiting human check.** Both judges then ran on the 76 other blind-spot rows of kinds the reader does write (breves, arrows and overlines; inverted commas, ! and ↓; restriction signs on pages where the reader writes them): 5 kept, 3 of them already in the earlier lists, and 2 new: ✱41·34 (p. 332) and ✱92·1 (p. 602), listed in §5 as N9–N10. They are loaded on the private review page as report-check additions. In all, 155 of the 1,024 single-reading hunks have now had both judges and 869 have had no judge. |
 | Full-page pass, Introduction (pp. 1–88) | **53** candidate rows. Checked less strictly than the body: Reader 1 (Codex) differed from Gutenberg and Opus picked the print in the forced choice. On 37 of them the second reader (Opus) agreed; on 16 there was no second reading. No Codex veto. |
-| Further candidates | Proposition pass, tier 2: 47 rows where the crop check picked the print. Crop check of 83 blind-spot rows: 4 picks for the print (✱34·84, ✱35·01, ✱61·391, ✱80·41; the first and last are also held as uncertain). Awaiting human review, and not yet in either human check (outside the precision sample's population and outside the 102 report entries). The Lean replay independently re-found ✱4·42 (p. 124), where the ebook omits the citation `⊢ . ✱3·26 .` that the print has on *Dem.* line (2). This is not an additional candidate: it is already one of the 215 body rows above (it was first filed there under ✱2·11 by the labelling rule described above; the label was corrected by hand), so it is not counted again here. It never reached the draft report. It is listed in [errata/vol1.md §4](errata/vol1.md#4-found-by-the-lean-replay--awaiting-human-check), awaiting human check. It is loaded on the private review page as an addition to the report check; no answer is recorded yet. |
+| Further candidates | Proposition pass, tier 2: 47 rows where the crop check picked the print. Crop check of 83 blind-spot rows: 4 picks for the print (✱34·84, ✱35·01, ✱61·391, ✱80·41; the first and last are also held as uncertain). Awaiting human review, and not yet in either human check (outside the precision sample's population and outside the 102 report entries). The Lean replay independently re-found ✱4·42 (p. 124), where the ebook omits the citation `⊢ . ✱3·26 .` that the print has on *Dem.* line (2). This is not an additional candidate: it is already one of the 215 body rows above (it was first filed there under ✱2·11 by the labelling rule described above; the label was corrected by hand), so it is not counted again here. It never reached the draft report. It is listed in [errata/vol1.md §4](errata/vol1.md#4-found-by-the-lean-replay--awaiting-human-check), awaiting human check. It is loaded on the private review page as an addition to the report check, awaiting human check. |
 | Held as uncertain | Two separate sets, 11 rows in all, none of them in the drafted report. 7 tier-2 items, whose answers were re-read as BOTH after a parsing fix; these are not counted in the 47 above. And 4 crop-check rows whose verdict changes with the effort setting, on 3 propositions: ✱34·84, ✱80·41 (twice, pp. 505 and 510) and ✱90·31. |
 
 ### Volume II: 1912 print, Gutenberg #78255
@@ -69,20 +69,23 @@ quoted or redistributed here.
 
 | | |
 |---|---|
-| Candidates | All 512 images of the 1913 print have both blind readings. **194 spans on 128 DP pages**, awaiting human review, where Opus and Codex both pick the 1913 print over DP's text (table-of-contents leader dots excluded, because DP's guidelines omit them). **Expect this count to fall:** the artefact review applied to Vol II ([METHODOLOGY §4.5](METHODOLOGY.md#4-adjudication)), which set aside 68 of 215 judged rows there, has not been run on Vol III. Earlier sub-count, pages 1–249: the Opus forced choice ran on 139 rows and picked DP's reading on 79, the print on 50 and neither on 8 (plus 1 "both" and 1 malformed answer); the Codex veto kept 31 of the 50. |
-| Open | Our filter against the errata printed in Vol III (pp. ix–x) has not been run yet, and the selection of the 139 judged rows needs re-checking ([METHODOLOGY §8](METHODOLOGY.md#8-external-review-and-corrections)). |
+| Candidates | All 512 images of the 1913 print have both blind readings. **161 candidates on 111 DP pages**, awaiting human review. They are what remains of 194 spans on 128 DP pages where Opus and Codex both pick the 1913 print over DP's text (table-of-contents leader dots excluded, because DP's guidelines omit them), after an artefact review like the one for Vol II ([METHODOLOGY §4](METHODOLOGY.md#4-adjudication)). Earlier sub-count, pages 1–249: the Opus forced choice ran on 139 rows and picked DP's reading on 79, the print on 50 and neither on 8 (plus 1 "both" and 1 malformed answer); the Codex veto kept 31 of the 50. |
+| Set aside | 33 of the 194, each with a written reason: 14 notation representation (the same printed sign written two ways), 12 residue of DP's in-round markup that our comparison failed to clean, 4 in set-aside classes, and 3 that a re-run of the current comparison does not reproduce. They are classed as comparison artefacts or as rows in set-aside classes (marks the readers cannot be trusted on), and are not counted as candidates. |
+| Published errata | The Errata to Vol III printed in the volume (pp. ix–x) were transcribed from the scan and checked, by Claude, not by a person: the 14 judged rows (10 distinct differences) on the 7 erratum pages that have judged rows were classified, one distinct difference at a time, and none of the rows is an already-printed erratum. |
+| Open | 9 of the 32 sampled Vol III pipeline-kept items in the precision sample are on rows now set aside; they have not been withdrawn yet ([METHODOLOGY §8](METHODOLOGY.md#8-external-review-and-corrections)). |
 | Reporting | Will be reported to DP through their process, while the formatting round is open, so corrections land before the book is posted. |
 
 ## Human review
 
-**In progress; no answers recorded yet.** Every count above is a pipeline output and is awaiting human review.
-Two checks are under way. Both are loaded on a private review page (231 active items in all):
+**In progress.** The human check has started on a small first batch of items on the private review page. Every
+count above is a pipeline output and is awaiting human review. Two checks are loaded on that page (233 active
+items in all):
 
-1. **Vol I report check (111 items).** All 102 Vol I report entries (80 in the draft report, 22 held back) are
-   on the page, and a person is checking each one against the scan. This checks every entry, not a sample.
-   Since 2026-10-09 the check also has 9 draft additions, not yet in the report: the 8 new candidates from the
-   body follow-up and ✱4·42 ([errata/vol1.md](errata/vol1.md) §4 and §5). Nothing goes to Project Gutenberg
-   until it is finished.
+1. **Vol I report check (113 items).** All 102 Vol I report entries (80 in the draft report, 22 held back) are
+   on the page, and a person will check each one against the scan. This checks every entry, not a sample.
+   The check also has 11 draft additions, not yet in the report: the 10 new candidates from the body follow-up
+   (8 added on 2026-10-09, 2 on 2026-10-10) and ✱4·42 ([errata/vol1.md](errata/vol1.md) §4 and §5). Nothing
+   goes to Project Gutenberg until it is finished.
 2. **Precision sample.** A blind review of a stratified sample measures the pipeline's **precision**: how
    many of its candidates a person agrees with.
 
@@ -109,7 +112,8 @@ Details of the precision sample:
 - **Populations covered:** Vol I samples the 215 body rows plus the 53 Introduction rows. Its estimate does
   not cover the Vol I report entries, which are checked one by one instead. Vol II samples the 147 kept rows
   (after the top-up), not the 7 errata-page items and not the 2 follow-up rows kept on 2026-10-08, which came
-  after the draw. Vol III samples the 194 spans.
+  after the draw. Vol III samples the 194 spans; 9 of its 32 pipeline-kept items are on rows that the Vol III
+  artefact review later set aside, and they have not been withdrawn yet.
 - **Blind:** for each item the reviewer sees a crop of the page around the disputed line (the full page is one
   click away), about 35 characters of context, and two versions of the span, A and B, in random order. One is
   the digital edition and the other the blind readers' version; the reviewer is not told which. The one
@@ -176,7 +180,7 @@ pipeline's development, to give a recall estimate. Details and limitations: [MET
 - **Tier 2.** In the Vol I proposition pass, rows with weaker support than tier 1: three of four readings agreed
   against Gutenberg, or the row was unresolved and re-run. They were decided by the crop check.
 - **Candidate.** A row that passed the pipeline's automatic checks. Not yet confirmed by a person.
-- **Awaiting human review.** No person has checked it against the scan yet. This applies to everything in
+- **Awaiting human review.** No result of a person's check against the scan is used for it yet. This applies to everything in
   this repository for now.
 - **Deep embedding** (Lean section). PM's formulas are represented as a data type inside Lean, and PM's own
   primitive propositions are the only rules of proof. Lean's logic is not used to prove PM's theorems directly.
@@ -255,7 +259,7 @@ This audit stands on other people's work, and several of them found things first
 ```
 README.md         this file: the tracker
 METHODOLOGY.md    the pipeline, its parameters, the control group, and the limitations
-errata/vol1.md    Vol I: all 102 drafted entries (80 in the draft report, 22 held back), with status, 1 body row re-found by the Lean replay, and 8 new candidates from the body follow-up; awaiting human review, not sent
+errata/vol1.md    Vol I: all 102 drafted entries (80 in the draft report, 22 held back), with status, 1 body row re-found by the Lean replay, and 10 new candidates from the body follow-up; awaiting human review, not sent
 errata/vol2.md    Vol II: unapplied published errata, the 156 candidates, and the 73 set-aside rows; awaiting human review
 scripts/          the code for the Vol I and Vol II pipeline (see scripts/README.md for what is missing)
 ```
@@ -314,3 +318,10 @@ under [CC0 1.0](LICENSE-DOCS). The Gutenberg text quoted in the errata lists is 
   new, and a triage bug fix leaves the 215 body rows unchanged. Disclosed that the public scripts do not yet
   include the Vol II follow-up step, and that `body_final.py`'s proposition labels can be wrong. Lean list of
   extra propositions completed with ✱4·3 and ✱2·54.
+- 2026-10-10: Vol I: both judges ran on 76 more blind-spot rows of kinds the reader does write; 5 kept,
+  3 already listed, 2 new candidates (✱41·34 p. 332, ✱92·1 p. 602; errata/vol1.md §5, N9–N10), awaiting human
+  check and loaded on the review page as report-check additions (113 report-check items). Of the 1,024
+  single-reading hunks, 155 have now had both judges and 869 none. Vol III: after the artefact review, 161
+  candidates on 111 DP pages and 33 set aside with reasons; checked against the printed Errata to Vol III, none
+  of the rows is an already-printed erratum. The human check has started on a small first batch and is in
+  progress. Methodology: a glyph-matching pilot is described; its results are not used for any list.

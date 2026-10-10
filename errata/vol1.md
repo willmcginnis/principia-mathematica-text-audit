@@ -2,10 +2,10 @@
 
 **Status: awaiting human review. Nothing on this page has been sent to Project Gutenberg.** This page lists
 all 102 entries of the draft. 80 are in the draft report and 22 are held back. So far they have been checked
-by AI models only. All 102 are now loaded on a private review page, where a person is checking each entry
-against the scan. The same check also has 9 draft additions that are not in the report: ✱4·42 (section 4)
-and the 8 candidates of section 5. No answers have been recorded yet. Nothing goes to Project Gutenberg until that check is
-finished. Until then every entry is provisional and may
+by AI models only. All 102 are now loaded on a private review page, where a person will check each entry
+against the scan. The same check also has 11 draft additions that are not in the report: ✱4·42 (section 4)
+and the 10 candidates of section 5. The human check has started on a small first batch of items and is in
+progress. Nothing goes to Project Gutenberg until that check is finished. Until then every entry is provisional and may
 change or be dropped. The report's own introduction below says how each entry was checked, and
 [METHODOLOGY.md](../METHODOLOGY.md) has the details. These entries are separate from the human precision
 sample (see the [README](../README.md#human-review)).
@@ -20,8 +20,9 @@ Each entry has one of two statuses:
 Further Vol I candidates from the full-page pass (Introduction and body) are not on this page. They are also
 awaiting human review (see the [README](../README.md)). There are two exceptions. Section 4 has ✱4·42, a body row
 that the Lean replay found again independently. It is one of the 215 body rows, not an additional candidate,
-and it is not one of the 102 entries. Section 5 has 8 new candidates from the follow-up of the body pages
-that had no second reading (2026-10-09). They are not among the 102 entries either.
+and it is not one of the 102 entries. Section 5 has 10 new candidates from the follow-up of the body pages
+that had no second reading: 8 from 2026-10-09 and 2 more from 2026-10-10. They are not among the 102 entries
+either.
 
 ## 1. Status of all 102 entries
 
@@ -107,7 +108,7 @@ that had no second reading (2026-10-09). They are not among the 102 entries eith
 | 75 | 55 | *64·21, p. 431, images/4849.svg | in draft report — awaiting human check |
 | 76 | 56 | *64·5, p. 433, images/4869.svg | in draft report — awaiting human check |
 | 77 | 57 | *65·15, p. 435, images/4927.svg | in draft report — awaiting human check |
-| 78 | — | *70·01, p. 440, images/4981.svg | held back — awaiting human check (breve or arrow only (breve vs hat), no close-up or two-judge check yet) |
+| 78 | — | *70·01, p. 440, images/4981.svg | held back — awaiting human check (breve or arrow only (breve vs hat); both judges now pick the print and Claude's crop look shows R̂, not yet checked by a person) |
 | 79 | 58 | *70·461, p. 443, images/5017.svg | in draft report — awaiting human check |
 | 80 | — | *70·481, p. 443, images/5021.svg | held back — awaiting human check (breve or arrow only (right vs left arrow), no close-up or two-judge check yet) |
 | 81 | 59 | *70·5, p. 443, images/5022.svg | in draft report — awaiting human check |
@@ -488,9 +489,11 @@ Thank you to everyone at Distributed Proofreaders and Project Gutenberg for this
 
 ## 3. Held back (22 entries)
 
-These 22 are in the same format. They are not in the draft report. Most change only marks that machine readers
-often get wrong (PM's dots, E! for ∃!, breves and arrows, the inverted D), and they have had neither a
-close-up crop check nor a later pick of the print by both full-page judges. In one, the forced-choice judge
+These 22 are in the same format. They are not in the draft report. Twenty change only marks that machine readers
+often get wrong (PM's dots, E! for ∃!, breves and arrows, the inverted D). Nineteen of these have had neither a
+close-up crop check nor a later pick of the print by both full-page judges. The twentieth, H21, has since had
+both (2026-10-10, in the blind-spot run of section 5): both full-page judges pick the print, and Claude's look at
+the scan crop shows R̂. No person has checked it, and it stays held back for the human check. In one, the forced-choice judge
 answered "neither". One (a missing ✱ in a proposition label) has had no dedicated scan check. The human check
 decides each one.
 
@@ -602,7 +605,7 @@ Status: held back — awaiting human check (E! for ∃! only, no close-up or two
 H21 (draft entry 78). *70·01, p. 440, images/4981.svg
 \alpha\rightarrow\beta = \breve{R} (\overrightarrow{R}
 \breve{R} ==> \hat{R}
-Status: held back — awaiting human check (breve or arrow only (breve vs hat), no close-up or two-judge check yet)
+Status: held back — awaiting human check (breve or arrow only (breve vs hat); both judges now pick the print and Claude's crop look shows R̂, not yet checked by a person)
 
 H22 (draft entry 80). *70·481, p. 443, images/5021.svg
 \equiv.\text{D}ʻ\overrightarrow{R}\subset\beta
@@ -618,7 +621,7 @@ candidate. It is not new: the full-page pass had already found it, and it is one
 the label was corrected by hand, and other labels may be wrong too). It is listed here because it never
 reached the draft report. It is not counted as a further candidate and is not one of the 102 entries above.
 It has now been drafted as an addition to the draft report (not yet in the report itself) and is loaded on
-the private review page as an addition to the report check; no answer is recorded yet. Its entry in Gutenberg's errata format is
+the private review page as an addition to the report check, awaiting human check. Its entry in Gutenberg's errata format is
 not on this page yet.
 
 - **✱4·42, p. 124, images/1032.svg** (scan image: DjVu page 146 of the Commons Vol I scan). *Dem.*, line (2).
@@ -626,17 +629,24 @@ not on this page yet.
   - **Ebook (#78050):** the same line, but its citation cell is empty: `⊢ . ✱3·26 .` is missing.
   - No published erratum touches p. 124 (neither the Vol I list nor the additional errata printed in Vols II
     and III), so this is not an applied erratum. The 1925 second edition has not been checked.
-  - Status: candidate — awaiting human check. Read from a close-up crop of the scan; no person has checked it
-    yet.
+  - Status: candidate — awaiting human check. Read from a close-up crop of the scan; no result of the human check
+    is used for it yet.
 
 ## 5. New candidates from the body follow-up (2026-10-09) — awaiting human check
 
-These 8 come from the follow-up of the 1,024 single-reading hunks on 109 body pages that had no second reading
-(see the [README](../README.md) and [METHODOLOGY.md §7](../METHODOLOGY.md#7-limitations)). Each had one blind
+The date in this heading is that of the first entries (N1–N8); N9–N10 were added on 2026-10-10. The heading is
+kept as it was so that existing links to it still work.
+
+These 10 come from the follow-up of the 1,024 single-reading hunks on 109 body pages that had no second reading
+(see the [README](../README.md) and [METHODOLOGY.md §7](../METHODOLOGY.md#7-limitations)). N1–N8 (2026-10-09)
+are from the rows that triage queued for judging. N9–N10 (2026-10-10) are from set-aside blind-spot rows of the
+kinds the reader does write (breves, arrows and overlines; inverted commas, ! and ↓; restriction signs on
+pages where the reader writes them). Both judges ran on the 76 such rows not already in the earlier blind-spot sample and kept
+5; 3 of those 5 were already in the earlier lists. Each had one blind
 reading, then two independent model judges both picked the scan reading. That is weaker support than the 215
-body rows, which also had a second blind reading. Claude then looked at the scan crop of each one; no person has
-checked any of them. They are not among the 102 entries above. They are loaded on the private review page as
-additions to the report check; no answers are recorded yet. They are
+body rows, which also had a second blind reading. Claude then looked at the scan crop of each one; no result of the
+human check is used for any of them yet. They are not among the 102 entries above. They are loaded on the private review page as
+additions to the report check, awaiting human check. They are
 written in the same format as sections 2 and 3, and each context line occurs exactly once in the HTML file.
 Six are the same pattern in ✱84: the print has "Cls ex² excl" where the ebook has "Cls² excl". The ebook's own
 ✱84·03 then reads "Cls² excl = Cls² excl − ∈ʻΛ Df", which is circular (that definition is draft report entry
@@ -682,4 +692,14 @@ N8. *84·35, p. 545, images/6231.svg
 \vdash\colon\ldotp \kappa\in \text{Cls}^{2}\,\text{excl}.\supset:R\in {\in}_{\Delta}ʻ\kappa.\equiv.R\in
 \text{Cls}^{2} ==> \text{Cls ex}^{2}
 Status: candidate — awaiting human check (headline of *84·35)
+
+N9. *41·34, p. 332, images/3618.svg
+\vdash.\dot{s}\alpha\upharpoonleft ʻʻ\lambda=\alpha\upharpoonleft \dot{s}ʻ\lambda
+\dot{s}\alpha ==> \dot{s}ʻ\alpha
+Status: candidate — awaiting human check (headline of *41·34: the print reads "ṡ‘α↿“λ", as the ebook's own Dem. line has it)
+
+N10. *92·1, p. 602, images/6917.svg
+\supset:S\in 1\rightarrow \text{Cls}.\supset.SʻR\in 1\rightarrow \text{Cls}
+SʻR ==> S\mid R
+Status: candidate — awaiting human check (Dem. of *92·1, line (2): the print has the relative product "S | R ∈ 1 → Cls", which is what *71·25 gives)
 ```

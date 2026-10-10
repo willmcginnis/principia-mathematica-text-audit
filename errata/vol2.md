@@ -1,7 +1,7 @@
 # Volume II (Gutenberg #78255): candidates, awaiting human review
 
 **Status: awaiting human review. Nothing on this page has been reported to Project Gutenberg.**
-No person has checked any row on this page yet. Every row, in every section, is awaiting human review.
+No result of the human check is used on this page yet. Every row, in every section, is awaiting human review.
 Statements below about what the print has are the models' readings of the page image, not a person's.
 A blind human review of a stratified sample is in progress and will give a measured precision for the
 pipeline list (see the [README](../README.md#human-review)). Expect some rows to be wrong and the list to
@@ -51,7 +51,7 @@ typography difference, and all 10 are set aside.
 
 Each row here has two blind machine readings of the 1912 page that agree with each other and differ from
 Gutenberg's text. Both model judges (Claude Opus and Codex), shown the page image and the two readings
-unlabelled, picked the readers' version as the print. No person has checked any row yet.
+unlabelled, picked the readers' version as the print. No result of the human check is used for any row yet.
 
 How to read the table:
 
@@ -265,7 +265,8 @@ page images by Claude.
     readers' diaeresis. Dotted operators are a set-aside class.
 
   The rule is `notation()` in [`scripts/normalize.py`](../scripts/normalize.py). It is not yet part of
-  `blind()`, so the earlier Vol I and Vol III counts are unchanged until those comparisons are re-run.
+  `blind()`, so the Vol I counts are unchanged until that comparison is re-run; the Vol III artefact review
+  applies it (METHODOLOGY §4.6).
 
 | Page | Class | Side | Span (normalized, truncated) |
 |---|---|---|---|
