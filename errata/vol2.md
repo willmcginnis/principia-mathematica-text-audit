@@ -1,11 +1,12 @@
-# Volume II (Gutenberg #78255): candidates, awaiting human review
+# Volume II (Gutenberg #78255): candidates, sample-checked, rows awaiting human check
 
-**Status: awaiting human review. Nothing on this page has been reported to Project Gutenberg.**
-No result of the human check is used on this page yet. Every row, in every section, is awaiting human review.
-Statements below about what the print has are the models' readings of the page image, not a person's.
-A blind human review of a stratified sample is in progress and will give a measured precision for the
-pipeline list (see the [README](../README.md#human-review)). Expect some rows to be wrong and the list to
-change.
+**Status: rows awaiting human check. Nothing on this page has been reported to Project Gutenberg.**
+No row on this page has been checked one by one by a person, and statements below about what the print has
+are the models' readings of the page image. A blind human check of a stratified sample (2026-10-11) measured
+the precision of the 147 pipeline spans kept after both artefact splits at 94% (80–98%): about 138 of the 147
+(117–144) are expected to be real differences from the print (see the [README](../README.md#human-review)).
+The sample does not cover the 2 follow-up spans or the 7 errata-page items, and this page does not say which
+sampled rows were confirmed. Expect some rows to be wrong and the list to change.
 
 Total: **156 candidates** = 149 spans on 125 printed pages from the pipeline (section 3), plus 7 further
 candidate discrepancies on pages that carry a published erratum (section 2). A further 73 judged rows are set
@@ -51,7 +52,7 @@ typography difference, and all 10 are set aside.
 
 Each row here has two blind machine readings of the 1912 page that agree with each other and differ from
 Gutenberg's text. Both model judges (Claude Opus and Codex), shown the page image and the two readings
-unlabelled, picked the readers' version as the print. No result of the human check is used for any row yet.
+unlabelled, picked the readers' version as the print. No row has been checked one by one by a person; a sample of them gave the precision above.
 
 How to read the table:
 
