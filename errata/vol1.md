@@ -14,7 +14,8 @@ was mapped to the ebook's version, the correction or neither afterwards (see the
 
 - **96 entries** are in the revised draft report (section 2): the **76** of the earlier draft report that the
   check confirmed, and **20** of the 22 held-back entries, which the check confirmed and which were moved in.
-- **1** is removed: the reviewer picked the ebook's text, so the print agrees with the ebook (draft entry 20, ✱25·37).
+- **1** is removed: the reviewer picked the ebook's text, that is, the reviewer found that the print (in the one
+  scan) agrees with the ebook (draft entry 20, ✱25·37).
 - **5** are held: the reviewer could not confirm them. They are not in the revised draft report.
 
 The revised report is a draft. Will McGinnis will send it; it has not been sent. The same check also covered
@@ -160,8 +161,8 @@ File: the HTML version under "more files" (78050-h.htm). The formulas are images
 
 How they were checked: against the 1910 first-edition scan on Wikimedia Commons ("Russell, Whitehead - Principia Mathematica, vol. I, 1910.djvu"; djvu page = printed page + 22), using its 1920-pixel page images. The checking was done by AI models under my direction:
 - Entries 1, 2, 4–19, 22, 25, 26, 29, 30, 36–46, 52–62, 64, 65, 70–72, 74 and 76–96: two machine readings of the page image from different model families (Claude and OpenAI Codex), neither given the ebook text, agreed with each other and differed from the ebook. Claude Opus then re-read the disputed line from the image, again without the ebook text. For all of these except 1 and 2, a third model (Claude Sonnet) was also shown the page and the two versions of the line, unlabelled, and picked the printed one.
-- Entries 32–35: found by replaying the proofs by machine, then checked by one Claude Opus reading of that line from the page image.
-- Entries 3, 20, 21, 23, 24, 27, 28, 31, 47–51, 63, 66–69, 73 and 75: found by the same machine checks, but held back from an earlier draft because the machine evidence was weaker (entries 3, 21, 23, 24, 27, 28, 47–51, 63, 66–69 and 75: the change is in a class of marks that machine readers often get wrong, with no close-up check and no later two-judge pick of the print; entry 20: the forced-choice judge answered neither; entry 31: the only support was one whole-page reading; entry 73: the change is in a class of marks that machine readers often get wrong; a later full-page check, in which two judges (Claude Opus and Codex) both picked the print and Claude looked at a crop of the scan, came after it was held back). They are included because my own check against the scan, below, picked the correction.
+- Entries 32–35: found by replaying the proofs by machine, then checked by one Claude Opus reading of that line from the page image. (Entry 31 also came from that machine work on the proofs, but is listed earlier; its page support is described in the next item.)
+- Entries 3, 20, 21, 23, 24, 27, 28, 31, 47–51, 63, 66–69, 73 and 75: all but entry 31 found by the same machine checks, but held back from an earlier draft because the machine evidence was weaker (entries 3, 21, 23, 24, 27, 28, 47–51, 63, 66–69 and 75: the change is in a class of marks that machine readers often get wrong, with no close-up check and no later two-judge pick of the print; entry 20: the forced-choice judge answered neither; entry 31: found while parsing and replaying the proofs by machine, not by reading the page; the only support from the page image was one whole-page reading whose instructions themselves ask for ✱ labels; entry 73: the change is in a class of marks that machine readers often get wrong; a later full-page check, in which two judges (Claude Opus and Codex) both picked the print and Claude looked at a crop of the scan, came after it was held back). They are included because my own check against the scan, below, picked the correction.
 - Entries 1, 2, 4–7, 9–12, 15, 16, 22, 25, 26, 29, 30, 33–35, 40–45, 53, 55–59, 62, 64, 65, 72, 74, 78, 80, 84 and 92–96 were also found independently by a later full-page check: two Codex readings of the page agreed against the ebook, and two judges (Claude Opus and Codex), each shown the page and both versions unlabelled, both picked the print.
 - Entries 2–6, 10, 21–30, 44, 47–51, 57, 63, 66–69, 73, 75 and 84 change only PM's dots, E! for ∃!, a breve or arrow over a letter or the inverted D (ᗡ), marks that machine readers often get wrong.
 
@@ -294,7 +295,7 @@ p \,\supset:\, q \,\supset.\, p \,.\, r \,\supset\, q ==> p \,\supset\, q \,.\su
 <b>1·5.</b>
 <b>1·5.</b> ==> <b>*1·5.</b>
 
-The next entries were found by replaying the proofs by machine (a broken line stops the replay):
+The next entries were found by replaying the proofs by machine (a broken line stops the replay). Entry 31, above, also came from parsing and replaying the proofs by machine:
 
 32. *2·16, p. 107, images/813.svg
 \vdash\colon p{\sim}({\sim}q).\supset.{\sim}q\supset{\sim}p
@@ -571,7 +572,7 @@ Thank you to everyone at Distributed Proofreaders and Project Gutenberg for this
 These are in the same format. One is removed, because the human check found that the print agrees with the
 ebook. Five are held, because the reviewer could not confirm them. One of the five is ✱50·72 (draft entry 57):
 the reviewer answered "neither", noting that the mark is very faded and looks more like a single bar than a
-double one. On the same line as a sample item, the reviewer later described the mark explicitly as a misprint:
+double one. On the sample item for the same line, the reviewer later described the mark explicitly as a misprint:
 all they could make out was a dot, like a ghost image (that answer was not blind; see the
 [README](../README.md#human-review)). Our own follow-up notes describe the mark in the scan as faint and
 broken. Whether that is in the print or only in the scan is open (see the note on the second copy in

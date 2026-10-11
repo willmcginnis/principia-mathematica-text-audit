@@ -98,16 +98,25 @@ which the blind readers', and no machine pick or score was shown. Items were ask
   an earlier version of the page, whose tiles were shuffled by item id. The tap was mapped to A, B or neither
   afterwards ([METHODOLOGY §4](METHODOLOGY.md#4-adjudication)).
 
+**An item-level note on 3 items.** Late in the check, a "[sic]" heads-up was added to 3 items (2 report-check
+items and 1 sample item; two on p. 117, one on p. 110). It said that one of the two versions has odd-looking
+characters that really are in its source text, checked by hand, without saying which version. It is not a
+machine pick. It was added 13 minutes after the reviewer, answering the p. 110 item, noted that its
+options looked like a LaTeX bug. Two of the three items had already been answered when the note was
+added, so the reviewer can have seen it on at most one answer.
+
 **One scored answer is not blind.** On one sample item (✱50·72, p. 355) the reviewer's blind answer was
 "neither". In a discussion afterwards, which was not blind, Claude suggested comparing the mark with ✱50·74 and
-re-answering, and said, wrongly (later retracted), that the Michigan copy independently showed the same mark;
-it is the same scan ([METHODOLOGY §7](METHODOLOGY.md#7-limitations)). 44 minutes after the blind answer,
+re-answering if it is a single bar, which is the proposed correction (so the suggestion pointed toward the
+proposed reading), and said, wrongly (later retracted), that the Michigan copy independently showed the same
+mark; it is the same scan ([METHODOLOGY §7](METHODOLOGY.md#7-limitations)). 44 minutes after the blind answer,
 the reviewer described the mark as a misprint (all they could make out was a dot, like a ghost image), and
 Claude entered "garbled" at the reviewer's request. That answer replaced the blind one and is the one scored.
 "Neither" and "garbled" both count against precision, so the figures below are the same either way.
 
-Detailed results are in the private source repository; this page gives the summary, not per-item answers. The
-page had two checks:
+Detailed results are in the private source repository; this page gives the summary and, apart from
+✱50·72 above, no per-item answers. The outcome of each Vol I report-check entry is in
+[errata/vol1.md](errata/vol1.md). The page had two checks:
 
 1. **Vol I report check (113 items; 64 answered with the picker, 49 with A/B):** all 102 entries of the earlier
    Vol I draft and 11 draft additions, each checked one by one. 96 entries were confirmed, 1 removed and 5 held;

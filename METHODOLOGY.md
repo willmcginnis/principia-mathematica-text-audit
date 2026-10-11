@@ -234,10 +234,11 @@ Of those 102, **22 are held back** from the report until they are checked furthe
 ([`scripts/pg_errata_render.py`](scripts/pg_errata_render.py) applies the rule and lists the reasons):
 - **20** change only marks in a set-aside class (§3: dots, E! for ∃!, breves and arrows, the inverted D) and
   have had neither a crop check nor a later pick of the print by both full-page judges. (One of them, ✱70·01,
-  had such a pick later, on 2026-10-10, together with a look at a crop of the scan by Claude, and stayed held
-  back for the human check.) The other 13 entries in these classes do have that two-judge pick. The earlier
-  draft report named them and said that none had had a close-up check; the revised draft instead says, entry by
-  entry, which machine checks each one had, including ✱70·01's later checks.
+  had neither when held back but had such a pick later, on 2026-10-10, together with a look at a crop of the
+  scan by Claude, and stayed held back for the human check.) The other 13 entries in these classes do have
+  that two-judge pick. The earlier draft report named them and said that none had had a close-up check; the
+  revised draft instead says, entry by entry, which machine checks each one had, including ✱70·01's later
+  checks.
 - **1** (✱25·56): the Sonnet judge answered "neither", and no later check picked the print.
 - **1** (✱1·5, a missing ✱ in the label): no dedicated scan check.
 
