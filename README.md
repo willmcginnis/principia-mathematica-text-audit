@@ -36,7 +36,8 @@ replay also independently re-found one Vol I transcription candidate (✱4·42, 
 already one of the 215 body rows from the full-page pass, but it never reached the draft report. The human
 check confirmed it (2026-10-11); it is not yet merged into the report. The Lean repository is public
 ([pm-lean](https://github.com/willmcginnis/pm-lean)), so its proofs can be checked by building it; the
-fidelity counts come from its ledgers ([details](#lean-formalization)).
+fidelity counts come from its ledgers ([details](#lean-formalization)). Done versus remaining, per volume, with
+milestones: [Lean progress](#lean-progress).
 
 ## Status
 
@@ -248,6 +249,50 @@ pipeline's development, to give a recall estimate. Details and limitations: [MET
 - **Deep embedding** (Lean section). PM's formulas are represented as a data type inside Lean, and every PM
   proposition counted is derived only from PM's own primitive propositions (the system also has an opt-in
   comprehension rule that no counted proposition uses; footnote 6). Lean's logic is not used to prove PM's theorems directly.
+
+## Lean progress
+
+<!-- progress:start -->
+Measured from the Lean repository's main branch (commit `2cca9b6`) by a script that is re-run at every update; no dates are estimated. The unit is one of PM's numbered assertions, and **stated / proved / followed PM's lines** mean the same as S / P / F in the [formalization table](#how-far-each-formalization-got). The counts come from the repository's own files and ledgers, as reported by the author; its proofs can be checked by building it. The bar shows the share proved. Footnotes ᵃ–ᵉ are below the tables.
+
+| | Stated | Proved | Followed PM's lines | Total in PM | Proved share |
+|---|---|---|---|---|---|
+| **Vol I** (✱1–✱97) | 369 | 365 | 304ᵃ | 3,230 assertionsᵇ | `██░░░░░░░░░░░░░░░░░░` 11.3% |
+| **Vol II** (✱100–✱234) | 0 | 0 | 0 | at most 3,898 numbered itemsᶜ | `░░░░░░░░░░░░░░░░░░░░` 0% |
+| **Vol III** | 0 | 0 | 0 | not yet countedᵈ | — |
+
+Vol I by range:
+
+| Range | Stated | Proved | Followed PM's lines | Assertions | Also numbered (Df / Pp / rules in words) | Proved share |
+|---|---|---|---|---|---|---|
+| ✱1–✱5 | 188 | 188 | 177 | 188 | 7 / 11 / 0 | `████████████████████` 100.0% |
+| ✱9–✱14 | 176 | 172 | 122ᵃ | 199 | 26 / 8 / 14 | `█████████████████░░░` 86.4% |
+| ✱20–✱56 | 5 | 5 | 5 | 1,366 | 91 / 0 / 0 | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
+| ✱60–✱97 | 0 | 0 | 0 | 1,477 | 62 / 0 / 0 | `░░░░░░░░░░░░░░░░░░░░` 0% |
+
+Milestonesᵉ:
+
+| Milestone | Page in the print (Vol I 1910, Vol II 1912) | Status |
+|---|---|---|
+| Types and reducibility (✱12) | Vol I, p. 174 | ✅ done: ✱12 has no assertions; its primitive propositions ✱12·1 and ✱12·11 are rules of the system |
+| Descriptions (✱14) | Vol I, pp. 184–195 | 🟡 in progress: 46 of 47 assertions proved (not ✱14·3) |
+| Classes (✱20–✱24) | Vol I, pp. 199–240 | 🟡 in progress: 5 of 316 assertions proved |
+| ✱54·43, the step before 1+1=2 | Vol I, p. 379 | ⬜ not started |
+| End of Vol I (✱97) | Vol I, p. 666 | 🟡 in progress: 365 of 3,230 assertions proved |
+| ✱110·643, 1+1=2 | Vol II, p. 86 | ⬜ not started |
+| End of Vol II (✱234) | Vol II, p. 772 | ⬜ not started |
+| End of Vol III | not yet counted | ⬜ not started |
+
+ᵃ Counted only where the Lean repository keeps a per-proposition ledger. ✱9–✱10 have none ("ns" in the formalization table), so they add 0 here. 4 stated items (✱9·2, ✱9·25, ✱10·1, ✱10·12) are primitive rules of the system, so they are not counted as proved.
+
+ᵇ Counted from the Gutenberg #78050 text with a few corrections, as in the formalization table: 3,449 numbered items, of which 3,230 are assertions, 186 definitions, 19 primitive propositions and 14 rules stated in words. Only assertions are counted as done or total.
+
+ᶜ An upper bound, not a count of assertions: the distinct ✱100–✱234 labels printed in bold in the Gutenberg #78255 transcription, definitions included (a label repeated in a quotation counts once), not checked item by item. It will be replaced when a per-item list of Vol II is built.
+
+ᵈ The Distributed Proofreaders text of Vol III is not yet published, so its items have not been counted here.
+
+ᵉ Pages are those of the first and last numbered item concerned, from the same lists as the totals. A milestone is done when every assertion in it is proved, in progress when some are, and not started when none are; a single proposition is in progress when its chapter has proved assertions.
+<!-- progress:end -->
 
 ## Lean formalization
 
@@ -568,3 +613,7 @@ under [CC0 1.0](LICENSE-DOCS). The Gutenberg text quoted in the errata lists is 
   definition now says that an extra rule no proof counted in P uses is allowed (our row has one, a comprehension
   rule that no counted PM proposition uses).
 - 2026-10-12: our row and the Lean section updated to the Lean repository's main branch `2cca9b6` (adds ✱13·3, 46 of ✱14's 47 assertions and per-proposition ledgers for ✱12–✱20, so F is now stated for ✱13, ✱14 and ✱20).
+- 2026-10-12: "Lean progress" section added (linked from the status at a glance): done versus remaining per
+  volume and per Vol I range, with milestones, computed by a script from the Lean repository's main branch
+  (`2cca9b6`) and PM's own lists of numbered items; it is re-run at every update. Vol II's total is an upper
+  bound from the transcription's labels; Vol III is not yet counted.
