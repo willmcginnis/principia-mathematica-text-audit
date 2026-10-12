@@ -82,9 +82,9 @@ A companion project formalizes part of PM in Lean 4 as a deep embedding (PM's fo
 Lean). It is public at [principia-mathematica-lean](https://github.com/willmcginnis/principia-mathematica-lean) (MIT), so its proofs can be checked by building it;
 its results are reported by the author. What it proves and from which rules, how closely its proofs follow PM's,
 and a comparison with other formalizations of PM are kept there, in one copy (moved from this README on
-2026-10-12; links at commit `e983171`):
-[docs/PROGRESS.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e983171/docs/PROGRESS.md), [docs/FIDELITY.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e983171/docs/FIDELITY.md) and
-[docs/FORMALIZATION_COMPARISON.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e983171/docs/FORMALIZATION_COMPARISON.md).
+2026-10-12; links at commit `e3f64c3`):
+[docs/PROGRESS.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e3f64c3/docs/PROGRESS.md), [docs/FIDELITY.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e3f64c3/docs/FIDELITY.md) and
+[docs/FORMALIZATION_COMPARISON.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e3f64c3/docs/FORMALIZATION_COMPARISON.md).
 
 What it contributed to this audit:
 
@@ -97,7 +97,7 @@ What it contributed to this audit:
   ([errata/vol1.md §4](errata/vol1.md#4-found-by-the-lean-replay--confirmed-by-the-human-check)).
 
 Apparent slips in the 1910 print itself, which the ebook follows, are noted in the Lean repository's
-[docs/FIDELITY.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e983171/docs/FIDELITY.md#what-the-proofs-found-in-the-text) (✱4·32 and ✱4·43, awaiting human check;
+[docs/FIDELITY.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e3f64c3/docs/FIDELITY.md#what-the-proofs-found-in-the-text) (✱4·32 and ✱4·43, awaiting human check;
 ✱10·27, possibly a citation slip).
 
 ## How this was made
@@ -199,8 +199,8 @@ Moved to [docs/GLOSSARY.md](docs/GLOSSARY.md).
 
 ### Lean progress
 
-Now in the Lean repository: [docs/PROGRESS.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e983171/docs/PROGRESS.md).
+Now in the Lean repository: [docs/PROGRESS.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e3f64c3/docs/PROGRESS.md).
 
 ### How far each formalization got
 
-Now in the Lean repository: [docs/FORMALIZATION_COMPARISON.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e983171/docs/FORMALIZATION_COMPARISON.md).
+Now in the Lean repository: [docs/FORMALIZATION_COMPARISON.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/e3f64c3/docs/FORMALIZATION_COMPARISON.md).

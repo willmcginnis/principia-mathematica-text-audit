@@ -3,6 +3,7 @@
 Newest first. Entries up to 2026-10-12 were moved here from the README; their text is unchanged, so their
 links and section names refer to the README as it was then. Earlier numbers are as of their date.
 
+- 2026-10-12: links to the Lean repository's docs moved to its new main, e3f64c3.
 - 2026-10-12: README slimmed; details moved to docs/; Lean progress and the formalization comparison now live in the Lean repository (links); CHANGELOG, CITATION.cff and CONTRIBUTING added.
 - 2026-10-12: the Lean repository was renamed principia-mathematica-lean; links updated (the old address redirects).
 - 2026-10-12: Lean progress, our row and the Lean section updated to the Lean repository's main branch `e73ab2b`
