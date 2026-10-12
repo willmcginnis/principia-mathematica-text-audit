@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: >-
+  If you use this audit or its errata lists, please cite it as below. It is
+  work in progress and changes often, and it has no numbered releases yet, so
+  please also give the commit you used. For Principia Mathematica itself, cite
+  the book; for the Lean formalization, cite the companion repository
+  principia-mathematica-lean.
+type: dataset
+title: "Principia Mathematica text audit: errata tracker"
+abstract: >-
+  A check of the digital texts of Whitehead and Russell's Principia
+  Mathematica (first edition, 1910-1913), Project Gutenberg's Volumes I and II
+  and Distributed Proofreaders' Volume III in progress, against page images of
+  the printed books, so that corrections can be offered back to the people
+  who maintain the texts. Candidates are marked as awaiting human check until
+  a person has checked them against the scan.
+authors:
+  - family-names: McGinnis
+    given-names: Will
+repository-code: "https://github.com/willmcginnis/principia-mathematica-text-audit"
+url: "https://github.com/willmcginnis/principia-mathematica-text-audit"
+license:
+  - MIT
+  - CC0-1.0
+keywords:
+  - Principia Mathematica
+  - Project Gutenberg
+  - Distributed Proofreaders
+  - errata
+  - proofreading
+  - transcription
