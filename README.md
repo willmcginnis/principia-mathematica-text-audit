@@ -26,7 +26,7 @@ maintain the texts. This repository tracks what has been found so far.
 | **Vol I Introduction** (pp. 1–88) | 🟡 2nd reader (Opus) on 44 of 88 pages | 🟡 Opus only (53 rows), no veto | 🟡 automatic matcher only; known gaps | 🟡 in the Vol I sample (precision above); rows not checked one by one | ⬜ not reported | ⬜ count only |
 | **Vol II** (Gutenberg #78255) | ✅ all 816 pages, both readings | ✅ both judges done, including the 7 follow-up rows judged on 2026-10-08 (2 kept, 5 set aside) | 🟡 17 rows classified by Claude; 3 apparently unapplied errata, awaiting confirmation | 🟡 sample checked: precision 94% (80–98%); rows not checked one by one | ⬜ not reported (156 candidates, 3 errata) | ✅ full list; rows outside the sample awaiting human check |
 | **Vol III** (DP, in progress) | ✅ all 512 images, both readings | 🟡 194 spans pass both judges; after the artefact review, 161 kept on 111 DP pages and 33 set aside with reasons | 🟡 checked against the Errata to Vol III (pp. ix–x) by Claude, not by a person: none of the rows is an already-printed erratum | 🟡 sample checked: precision 91% (72–98%); rows not checked one by one | ⬜ not yet; will go to DP through their process | — counts only (DP text unpublished) |
-| **Lean formalization (✱1–✱5, ✱9–✱14 (✱9 in part, ✱14 except ✱14·3), part of ✱20)** | — statements read from the 1910 scan (✱12–✱20's from Gutenberg #78050's transcription of the 1910 print, its LaTeX, not the scan images) | — proofs checked by Lean, not judged | — | ✅ ✱1·4 and ✱4·42 confirmed by the human check | ⬜ not sent: ✱1·4 (entry 1 of the revised Vol I draft) and ✱4·42 (already one of the 215 Vol I body rows; an addition, not yet merged) | 🟡 summary only; ✱4·42 in [errata/vol1.md §4](errata/vol1.md#4-found-by-the-lean-replay--confirmed-by-the-human-check); Lean repo: [pm-lean](https://github.com/willmcginnis/pm-lean) |
+| **Lean formalization (✱1–✱5, ✱9–✱14 (✱9 in part, ✱14 except ✱14·3), most of ✱20 and ✱21)** | — statements read from the 1910 scan (✱12–✱21's from Gutenberg #78050's transcription of the 1910 print, its LaTeX, not the scan images) | — proofs checked by Lean, not judged | — | ✅ ✱1·4 and ✱4·42 confirmed by the human check | ⬜ not sent: ✱1·4 (entry 1 of the revised Vol I draft) and ✱4·42 (already one of the 215 Vol I body rows; an addition, not yet merged) | 🟡 summary only; ✱4·42 in [errata/vol1.md §4](errata/vol1.md#4-found-by-the-lean-replay--confirmed-by-the-human-check); Lean repo: [pm-lean](https://github.com/willmcginnis/pm-lean) |
 
 ✅ done · 🟡 partial / in progress · ⬜ not started · — not applicable
 
@@ -253,11 +253,11 @@ pipeline's development, to give a recall estimate. Details and limitations: [MET
 ## Lean progress
 
 <!-- progress:start -->
-Measured from the Lean repository's main branch (commit `2cca9b6`) by a script that is re-run at every update; no dates are estimated. The unit is one of PM's numbered assertions, and **stated / proved / followed PM's lines** mean the same as S / P / F in the [formalization table](#how-far-each-formalization-got). The counts come from the repository's own files and ledgers, as reported by the author; its proofs can be checked by building it. The bar shows the share proved. Footnotes ᵃ–ᵉ are below the tables.
+Measured from the Lean repository's main branch (commit `ac0cdd1`) by a script that is re-run at every update; no dates are estimated. The unit is one of PM's numbered assertions, and **stated / proved / followed PM's lines** mean the same as S / P / F in the [formalization table](#how-far-each-formalization-got). The counts come from the repository's own files and ledgers, as reported by the author; its proofs can be checked by building it. The bar shows the share proved. Footnotes ᵃ–ᵉ are below the tables.
 
 | | Stated | Proved | Followed PM's lines | Total in PM | Proved share |
 |---|---|---|---|---|---|
-| **Vol I** (✱1–✱97) | 369 | 365 | 304ᵃ | 3,230 assertionsᵇ | `██░░░░░░░░░░░░░░░░░░` 11.3% |
+| **Vol I** (✱1–✱97) | 459 | 455 | 394ᵃ | 3,230 assertionsᵇ | `███░░░░░░░░░░░░░░░░░` 14.1% |
 | **Vol II** (✱100–✱234) | 0 | 0 | 0 | at most 3,898 numbered itemsᶜ | `░░░░░░░░░░░░░░░░░░░░` 0% |
 | **Vol III** | 0 | 0 | 0 | not yet countedᵈ | — |
 
@@ -267,7 +267,7 @@ Vol I by range:
 |---|---|---|---|---|---|---|
 | ✱1–✱5 | 188 | 188 | 177 | 188 | 7 / 11 / 0 | `████████████████████` 100.0% |
 | ✱9–✱14 | 176 | 172 | 122ᵃ | 199 | 26 / 8 / 14 | `█████████████████░░░` 86.4% |
-| ✱20–✱56 | 5 | 5 | 5 | 1,366 | 91 / 0 / 0 | `░░░░░░░░░░░░░░░░░░░░` 0.4% |
+| ✱20–✱56 | 95 | 95 | 95 | 1,366 | 91 / 0 / 0 | `█░░░░░░░░░░░░░░░░░░░` 7.0% |
 | ✱60–✱97 | 0 | 0 | 0 | 1,477 | 62 / 0 / 0 | `░░░░░░░░░░░░░░░░░░░░` 0% |
 
 Milestonesᵉ:
@@ -276,9 +276,9 @@ Milestonesᵉ:
 |---|---|---|
 | Types and reducibility (✱12) | Vol I, p. 174 | ✅ done: ✱12 has no assertions; its primitive propositions ✱12·1 and ✱12·11 are rules of the system |
 | Descriptions (✱14) | Vol I, pp. 184–195 | 🟡 in progress: 46 of 47 assertions proved (not ✱14·3) |
-| Classes (✱20–✱24) | Vol I, pp. 199–240 | 🟡 in progress: 5 of 316 assertions proved |
+| Classes (✱20–✱24) | Vol I, pp. 199–240 | 🟡 in progress: 95 of 316 assertions proved (✱20 51 of 55, ✱21 44 of 48; ✱22–✱24 not started). Not counted: ✱20·4, ✱20·41, ✱21·4, ✱21·41 (α ∈ Cls, R ∈ Rel: they wait on a design decision about classes of classes); ✱20·631, ✱20·632, ✱21·631, ✱21·632 (about significance, built into the syntax like ✱10·121 and ✱10·122, so not counted as proved) |
 | ✱54·43, the step before 1+1=2 | Vol I, p. 379 | ⬜ not started |
-| End of Vol I (✱97) | Vol I, p. 666 | 🟡 in progress: 365 of 3,230 assertions proved |
+| End of Vol I (✱97) | Vol I, p. 666 | 🟡 in progress: 455 of 3,230 assertions proved |
 | ✱110·643, 1+1=2 | Vol II, p. 86 | ⬜ not started |
 | End of Vol II (✱234) | Vol II, p. 772 | ⬜ not started |
 | End of Vol III | not yet counted | ⬜ not started |
@@ -297,7 +297,7 @@ Milestonesᵉ:
 ## Lean formalization
 
 A companion project formalizes the propositional part of PM (✱1–✱5), ✱9–✱14 (✱9 in part, ✱14 except ✱14·3), and
-part of ✱20, in Lean 4, with statements read from the 1910 printed scan, except ✱12–✱20's, which were taken from
+most of ✱20 and ✱21, in Lean 4, with statements read from the 1910 printed scan, except ✱12–✱21's, which were taken from
 the Distributed Proofreaders transcription (Gutenberg #78050) of the 1910 print (its LaTeX), not the scan images, per the repository's
 `docs/TYPES_DESIGN.md`. It is a **deep
 embedding**: PM's formulas are a data type inside Lean, and every PM proposition
@@ -309,7 +309,7 @@ building it (its README gives the build steps); the fidelity counts come from it
 (`data/*_ledger.json`).
 
 - All 188 ✱2–✱5 propositions are proved. Lean's `#print axioms` reports "does not depend on any axioms" for
-  every PM theorem (✱2–✱5 and ✱9–✱20). That means the proofs use none of Lean's own axioms, such as choice. PM's primitive
+  every PM theorem (✱2–✱5 and ✱9–✱21). That means the proofs use none of Lean's own axioms, such as choice. PM's primitive
   propositions are not Lean axioms but the rules of the embedded proof system. There is no `sorry`, no
   `native_decide` and no added axiom.
 - 103 of them are replayed as explicit proof terms built from PM's own cited propositions: 72 use only the
@@ -351,7 +351,7 @@ building it (its README gives the build steps); the fidelity counts come from it
   and ✱9·2 and ✱9·25 are not counted as proved because here they are primitive (✱9·1–✱9·13 are primitive
   propositions in PM's ✱9, not assertions). ✱10
   reads 48/46: all 48 assertions are stated, and ✱10·1 and ✱10·12 are primitive (✱10·11 and ✱10·13 are rules,
-  not assertions). A soundness theorem shows that every ✱9–✱20 theorem is true in every model. There is no
+  not assertions). A soundness theorem shows that every ✱9–✱21 theorem is true in every model. There is no
   adequacy theorem yet: the syntax also admits terms that correspond to no finite PM formula. Two findings,
   reported by the author:
   - Six ✱10 proofs (✱10·25, ✱10·251, ✱10·33, ✱10·34, ✱10·36, ✱10·37) use a real variable, so they assume
@@ -359,19 +359,22 @@ building it (its README gives the build steps); the fidelity counts come from it
     machine-checked for ✱10·25 only; for the other five this was checked by hand.
   - ✱10·27 (p. 150): the print cites ✱10·1 for the step that turns y into an apparent variable, which is
     ✱10·11. This is possibly a citation slip in PM; it has not been checked against the 1925 edition.
-- **✱11–✱20 (2026-10-12, main branch `2cca9b6`).** All 51 ✱11 assertions are proved along PM's lines. From ✱12 on,
+- **✱11–✱21 (2026-10-12, main branch `ac0cdd1`).** All 51 ✱11 assertions are proved along PM's lines. From ✱12 on,
   the system follows PM's 1910 ramified types (functions of one and two arguments only), with ✱12·1 and ✱12·11
   (reducibility) as primitive rules. All 25 ✱13 assertions and 46 of ✱14's 47 are proved; ✱14·3 is not, because it
   takes propositions as apparent variables, and the formalization's types, following ✱12 (p. 172), have none (PM
-  proves ✱14·31–✱14·34 without it, p. 194). ✱20 is partial (5 assertions). ✱11, ✱13, ✱14 and ✱20 each have a
+  proves ✱14·31–✱14·34 without it, p. 194). 51 of ✱20's 55 numbered propositions (classes) and 44 of ✱21's 48
+  (relations) are proved; the four not counted in each, and why, are in [Lean progress](#lean-progress). In ✱11·71, ✱13,
+  ✱14 and ✱20, PM's displayed chains are written as Lean `calc` blocks, one line per PM line (✱21 gives only
+  bracketed hints, so it has none). ✱11, ✱13, ✱14, ✱20 and ✱21 each have a
   per-proposition ledger. An opt-in comprehension rule (our reading of ✱9·15/✱10·122) is in the system, but no
   numbered PM proposition uses it. Consistency is proved in a finite model with no Lean axioms, stated at the
-  model's variables. Counts and what is not done (✱14·3, ✱20 beyond its first five, ✱21 onward, test F4, an
+  model's variables. Counts and what is not done (✱14·3, ✱20·4, ✱20·41, ✱21·4, ✱21·41, ✱22 onward, test F4, an
   adequacy theorem, functions of three or more arguments): footnotes ⁶–⁸ of the
   [table](#how-far-each-formalization-got).
-- `#print axioms` reports "does not depend on any axioms" for 671 of the 675 declarations in the project's
-  axiom check (the ✱2–✱5 theorems, the completeness theorem, and the ✱9–✱20 theorems, rules, styles and models);
-  the other 4 belong to a general classical model of the system. Of all 1471 declarations under `PM` (and 31
+- `#print axioms` reports "does not depend on any axioms" for 790 of the 794 declarations in the project's
+  axiom check (the ✱2–✱5 theorems, the completeness theorem, and the ✱9–✱21 theorems, rules, styles and models);
+  the other 4 belong to a general classical model of the system. Of all 1625 declarations under `PM` (and 31
   private ones), 25 use Lean's standard axioms: compiler-generated lemmas and a `Repr` instance (for printing
   formulas); three propositional metatheorems (among them the ✱1–✱5 soundness theorem); and that classical
   model, which uses choice. Its consistency statements are also proved without axioms in the finite model. None of the 25 is a PM derivation.
@@ -447,7 +450,7 @@ we compiled the project; `static` means P comes from reading and searching the s
 | Project | Prim. | Emb. | Check | Fits within PM | ✱2–✱5 | ✱9 | ✱10 | ✱11–✱14 | ✱20–✱56 | ✱60–✱97 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | **PM assertions (denominator)** | | | | | **188** | **28** | **48** | **123** | **1366** | **1477** |
-| [ours](https://github.com/willmcginnis/pm-lean) (Lean 4) | PM ✱1·1–✱1·6; ✱10 alt. method; ✱12·1/✱12·11 | deep | build | yes for its PM propositions (✱1–✱5, ✱9–✱20); has an extra comprehension rule that no numbered PM proposition uses⁶ | 188/188/177¹ | 6/4/ns | 48/46/ns | 122/122/122⁷ | 5/5/5⁷ | – |
+| [ours](https://github.com/willmcginnis/pm-lean) (Lean 4) | PM ✱1·1–✱1·6; ✱10 alt. method; ✱12·1/✱12·11 | deep | build | yes for its PM propositions (✱1–✱5, ✱9–✱21); has an extra comprehension rule that no numbered PM proposition uses⁶ | 188/188/177¹ | 6/4/ns | 48/46/ns | 122/122/122⁷ | 95/95/95⁷ | – |
 | [l-pommeret](https://github.com/l-pommeret/Principia-Mathematica) (Lean 4) | PM ✱1·1–✱1·6, ✱1·11; ramified system | deep (shallow from ✱70) | build⁴ | yes for ✱1–✱5; not verified for its ramified ranges; no for its shallow ones⁵ | 188/188/171 | 28/26/21 | 35/34/34 | 71/68/66 | 183/128/88 | 160/151/98 (6 deep) |
 | [Neo-Principia](https://github.com/MudroadWhite/Neo-Principia) (Rocq) | host logic (classical Coq); ✱9+ Pps admitted | shallow | static | no | 186/186/ns² | 28/28‡/ns | 48/47‡/ns | 123/66‡/ns | 51/1‡/ns | – |
 | [PrincipiaMathematica_Agda](https://github.com/yangg1g/PrincipiaMathematica_Agda) (Agda) | Sheffer stroke; PM ✱1·1–✱1·6 | deep | static | partly (its primitive connective is the Sheffer stroke) | 188/188/ns | 28/0/ns | – | – | – | – |
@@ -485,11 +488,11 @@ of primitive propositions. 59 PM numbers have deep proofs that take an extra hyp
 such as an assumption about carrying reducibility across scopes; those are counted as not proved, unless the
 same number has another, unconditional proof.
 
-⁶ Our row was measured on the Lean repository's main branch (commit `2cca9b6`, 2026-10-12), which we built. Every
+⁶ Our row was measured on the Lean repository's main branch (commit `ac0cdd1`, 2026-10-12), which we built. Every
 PM proposition counted in P is derived from PM's primitive propositions: ✱1·1–✱1·6, those of ✱10's alternative
 method, and ✱12·1 and ✱12·11. The system also has an opt-in comprehension rule (our reading of ✱9·15/✱10·122); no
 PM proposition counted in P uses it. Its `RedCheck.lean`, which follows each proof down to the rules, finds 1 of
-the 390 declarations it treats as PM propositions using it, the helper `q12_1_of_var` (not a numbered PM
+the 480 declarations it treats as PM propositions using it, the helper `q12_1_of_var` (not a numbered PM
 proposition). Besides the rule's own statements, 9 other declarations that are not PM propositions
 (metatheorems about the system, the trap and the styles of predicativity) also use it. Consistency is proved in a
 finite model with no Lean axioms, stated at the model's variables (see its README's scope note). The formula type
@@ -501,12 +504,21 @@ apparent variables; the formalization's types, following p. 172, have none). ✱
 here primitive rules. F comes from the per-proposition ledgers, counted as for ✱11 before: every ledgered proof
 follows PM's Dem. lines or hint. As in the Lean README, `pm-lines` means it uses only the propositions PM cites (with
 the steps PM leaves tacit), `pm-lines+extra` that it also needs at least one PM does not cite: ✱11 34/17, ✱13 12/13,
-✱14 9/37⁸ (122 in all). ✱20–✱56: 5 of ✱20's 55 assertions, F = 5 (2/3). Not done: ✱14·3, ✱20 beyond its first five,
-✱21 onward, a proof that comprehension without ✱12·1 is weaker (so that the styles of predicativity differ without
-reducibility; its test F4), an adequacy theorem, and functions of three or more arguments.
+✱14 9/37⁸ (122 in all). ✱20–✱56: 51 of ✱20's 55 assertions and 44 of ✱21's 48, F = 95⁸: ✱20 18/31 and ✱21 13/29,
+plus two numbered propositions in each that are proved as rules (✱20·62, ✱20·633, ✱21·62, ✱21·633, all `pm-lines`).
+✱20·631, ✱20·632, ✱21·631 and ✱21·632 concern significance and are built into the syntax, so they are not counted.
+Not done: ✱14·3; ✱20·4, ✱20·41, ✱21·4 and ✱21·41, with the definitions they need (✱20·03, ✱20·08, ✱20·081, ✱21·03,
+✱21·08–✱21·083), which wait on a design decision about classes of classes; ✱22 onward; a proof that comprehension
+without ✱12·1 is weaker (so that the styles of predicativity differ without reducibility; its test F4); an adequacy
+theorem; and functions of three or more arguments.
 
-⁸ Chaining ⊃ and ≡ lines under a hypothesis is counted as a tacit step (PM p. 123: "The use of ✱4·22 will often be
-tacit"). Counted as an extra instead, it would move one ✱14 row (✱14·25), giving 8/38 instead of 9/37.
+⁸ The Lean README gives three readings of the ✱11, ✱13, ✱14, ✱20 and ✱21 counts, which differ in whether the
+structural steps PM leaves unstated (what the Lean README calls "glue": joining the lines of a displayed chain, putting factors in order,
+carrying a step under (∃x)) count as tacit or as extra: strict (all glue extra), as recorded (the ledgers'
+`fidelity` field) and all glue tacit. The counts shown here are the ones as recorded, in which joining chain
+lines is tacit (PM p. 123: "The use of ✱4·22 will often be tacit") and the other glue is extra. We do not choose
+among the readings; all three are in the fidelity table of the
+[Lean README](https://github.com/willmcginnis/pm-lean/blob/ac0cdd1/README.md) (section on ✱12–✱20).
 
 **l-pommeret is the furthest deep formalization in the table:** a deep ramified system whose rules include
 ✱12·1 and ✱12·11, with deep proofs into ✱11–✱56. We built it ourselves. Like ours, it records per proposition
@@ -617,3 +629,8 @@ under [CC0 1.0](LICENSE-DOCS). The Gutenberg text quoted in the errata lists is 
   volume and per Vol I range, with milestones, computed by a script from the Lean repository's main branch
   (`2cca9b6`) and PM's own lists of numbered items; it is re-run at every update. Vol II's total is an upper
   bound from the transcription's labels; Vol III is not yet counted.
+- 2026-10-12: Lean progress, our row and the Lean section updated to the Lean repository's main branch `ac0cdd1`
+  (adds 51 of ✱20's 55 numbered propositions and 44 of ✱21's 48, with ledgers, and PM's displayed chains in ✱11·71, ✱13,
+  ✱14 and ✱20 as `calc` blocks): Vol I 455 of 3,230 assertions proved; classes (✱20–✱24) in progress, with the eight ✱20/✱21 items not
+  counted listed; ✱20–✱56 95/95/95. Fidelity counts are those the ledgers record; footnote 8 notes the Lean README's three
+  readings without choosing among them.
