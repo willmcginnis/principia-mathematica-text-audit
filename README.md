@@ -26,7 +26,7 @@ maintain the texts. This repository tracks what has been found so far.
 | **Vol I Introduction** (pp. 1–88) | 🟡 2nd reader (Opus) on 44 of 88 pages | 🟡 Opus only (53 rows), no veto | 🟡 automatic matcher only; known gaps | 🟡 in the Vol I sample (precision above); rows not checked one by one | ⬜ not reported | ⬜ count only |
 | **Vol II** (Gutenberg #78255) | ✅ all 816 pages, both readings | ✅ both judges done, including the 7 follow-up rows judged on 2026-10-08 (2 kept, 5 set aside) | 🟡 17 rows classified by Claude; 3 apparently unapplied errata, awaiting confirmation | 🟡 sample checked: precision 94% (80–98%); rows not checked one by one | ⬜ not reported (156 candidates, 3 errata) | ✅ full list; rows outside the sample awaiting human check |
 | **Vol III** (DP, in progress) | ✅ all 512 images, both readings | 🟡 194 spans pass both judges; after the artefact review, 161 kept on 111 DP pages and 33 set aside with reasons | 🟡 checked against the Errata to Vol III (pp. ix–x) by Claude, not by a person: none of the rows is an already-printed erratum | 🟡 sample checked: precision 91% (72–98%); rows not checked one by one | ⬜ not yet; will go to DP through their process | — counts only (DP text unpublished) |
-| **Lean formalization (✱1–✱5, ✱9–✱14 (✱9 in part, ✱14·3 as a schema, not as printed), most of ✱20 and ✱21)** | — statements read from the 1910 scan (✱12–✱21's from Gutenberg #78050's transcription of the 1910 print, its LaTeX, not the scan images) | — proofs checked by Lean, not judged | — | ✅ ✱1·4 and ✱4·42 confirmed by the human check | ⬜ not sent: ✱1·4 (entry 1 of the revised Vol I draft) and ✱4·42 (already one of the 215 Vol I body rows; an addition, not yet merged) | 🟡 summary only; ✱4·42 in [errata/vol1.md §4](errata/vol1.md#4-found-by-the-lean-replay--confirmed-by-the-human-check); Lean repo: [pm-lean](https://github.com/willmcginnis/pm-lean) |
+| **Lean formalization (✱1–✱5, ✱9–✱14 (✱9 in part, ✱14·3 as a schema, not as printed), most of ✱20 and ✱21)** | — statements read from the 1910 scan (✱12–✱21's from Gutenberg #78050's transcription of the 1910 print, its LaTeX, not the scan images) | — proofs checked by Lean, not judged | — | ✅ ✱1·4 and ✱4·42 confirmed by the human check | ⬜ not sent: ✱1·4 (entry 1 of the revised Vol I draft) and ✱4·42 (already one of the 215 Vol I body rows; an addition, not yet merged) | 🟡 summary only; ✱4·42 in [errata/vol1.md §4](errata/vol1.md#4-found-by-the-lean-replay--confirmed-by-the-human-check); Lean repo: [principia-mathematica-lean](https://github.com/willmcginnis/principia-mathematica-lean) |
 
 ✅ done · 🟡 partial / in progress · ⬜ not started · — not applicable
 
@@ -35,7 +35,7 @@ author: all 188 ✱2–✱5 propositions are proved from PM's primitive proposit
 replay also independently re-found one Vol I transcription candidate (✱4·42, p. 124). It is not new: it is
 already one of the 215 body rows from the full-page pass, but it never reached the draft report. The human
 check confirmed it (2026-10-11); it is not yet merged into the report. The Lean repository is public
-([pm-lean](https://github.com/willmcginnis/pm-lean)), so its proofs can be checked by building it; the
+([principia-mathematica-lean](https://github.com/willmcginnis/principia-mathematica-lean)), so its proofs can be checked by building it; the
 fidelity counts come from its ledgers ([details](#lean-formalization)). Done versus remaining, per volume, with
 milestones: [Lean progress](#lean-progress).
 
@@ -304,7 +304,7 @@ embedding**: PM's formulas are a data type inside Lean, and every PM proposition
 counted is derived only from PM's primitive propositions: ✱1·1–✱1·6, ✱10's alternative method and ✱12·1/✱12·11
 (the definitions ✱1·01, ✱3·01, ✱4·01 and their later analogues are abbreviations). The system also has an
 opt-in comprehension rule that no counted proposition uses (footnote 6). These results are reported by the author. The Lean repository is public at
-[github.com/willmcginnis/pm-lean](https://github.com/willmcginnis/pm-lean) (MIT), so the proofs can be checked by
+[github.com/willmcginnis/principia-mathematica-lean](https://github.com/willmcginnis/principia-mathematica-lean) (MIT), so the proofs can be checked by
 building it (its README gives the build steps); the fidelity counts come from its ledgers
 (`data/*_ledger.json`).
 
@@ -451,7 +451,7 @@ we compiled the project; `static` means P comes from reading and searching the s
 | Project | Prim. | Emb. | Check | Fits within PM | ✱2–✱5 | ✱9 | ✱10 | ✱11–✱14 | ✱20–✱56 | ✱60–✱97 |
 |---|---|---|---|---|---|---|---|---|---|---|
 | **PM assertions (denominator)** | | | | | **188** | **28** | **48** | **123** | **1366** | **1477** |
-| [ours](https://github.com/willmcginnis/pm-lean) (Lean 4) | PM ✱1·1–✱1·6; ✱10 alt. method; ✱12·1/✱12·11 | deep | build | yes for its PM propositions (✱1–✱5, ✱9–✱21); has an extra comprehension rule that no numbered PM proposition uses⁶ | 188/188/177¹ | 6/4/ns | 48/46/ns | 123/123/123⁷ | 95/95/95⁷ | – |
+| [ours](https://github.com/willmcginnis/principia-mathematica-lean) (Lean 4) | PM ✱1·1–✱1·6; ✱10 alt. method; ✱12·1/✱12·11 | deep | build | yes for its PM propositions (✱1–✱5, ✱9–✱21); has an extra comprehension rule that no numbered PM proposition uses⁶ | 188/188/177¹ | 6/4/ns | 48/46/ns | 123/123/123⁷ | 95/95/95⁷ | – |
 | [l-pommeret](https://github.com/l-pommeret/Principia-Mathematica) (Lean 4) | PM ✱1·1–✱1·6, ✱1·11; ramified system | deep (shallow from ✱70) | build⁴ | yes for ✱1–✱5; not verified for its ramified ranges; no for its shallow ones⁵ | 188/188/171 | 28/26/21 | 35/34/34 | 71/68/66 | 183/128/88 | 160/151/98 (6 deep) |
 | [Neo-Principia](https://github.com/MudroadWhite/Neo-Principia) (Rocq) | host logic (classical Coq); ✱9+ Pps admitted | shallow | static | no | 186/186/ns² | 28/28‡/ns | 48/47‡/ns | 123/66‡/ns | 51/1‡/ns | – |
 | [PrincipiaMathematica_Agda](https://github.com/yangg1g/PrincipiaMathematica_Agda) (Agda) | Sheffer stroke; PM ✱1·1–✱1·6 | deep | static | partly (its primitive connective is the Sheffer stroke) | 188/188/ns | 28/0/ns | – | – | – | – |
@@ -522,14 +522,14 @@ carrying a step under (∃x)) count as tacit or as extra: strict (all glue extra
 `fidelity` field) and all glue tacit. The counts shown here are the ones as recorded, in which joining chain
 lines is tacit (PM p. 123: "The use of ✱4·22 will often be tacit") and the other glue is extra. We do not choose
 among the readings; all three are in the fidelity table of the
-[Lean README](https://github.com/willmcginnis/pm-lean/blob/e73ab2b/README.md) (section on ✱12–✱20).
+[Lean README](https://github.com/willmcginnis/principia-mathematica-lean/blob/e73ab2b/README.md) (section on ✱12–✱20).
 
 **l-pommeret is the furthest deep formalization in the table:** a deep ramified system whose rules include
 ✱12·1 and ✱12·11, with deep proofs into ✱11–✱56. We built it ourselves. Like ours, it records per proposition
 whether a proof follows PM's. What our ledgers add, and what we have not found in the other projects' files, is
 a list, for each of the 188 ✱2–✱5 proofs and the 51 ✱11 proofs, of the propositions it needs that PM does not
 cite (l-pommeret's status document reports how many of its proofs reach a proposition by a route PM does not
-print). Our Lean repository is public at [github.com/willmcginnis/pm-lean](https://github.com/willmcginnis/pm-lean),
+print). Our Lean repository is public at [github.com/willmcginnis/principia-mathematica-lean](https://github.com/willmcginnis/principia-mathematica-lean),
 so its proofs can be checked by building it (its README has the build steps). The row's fidelity counts come
 from its ledgers (`data/*_ledger.json`), not from the build; which rules each theorem uses comes from its README's
 rule table, which its `RedCheck.lean` cross-checks against the proofs.
@@ -622,7 +622,7 @@ under [CC0 1.0](LICENSE-DOCS). The Gutenberg text quoted in the errata lists is 
   numbered items, 53 derived and 7 restating the embedding's primitive rules; the 103 explicit ✱2–✱5 replays
   are now split into 72 that use only the propositions PM cites and 31 that also need one PM does not cite.
   New table: how far each formalization of PM got, in one unit, with a defined "Fits within PM" column.
-- 2026-10-11: the Lean repository is now public ([pm-lean](https://github.com/willmcginnis/pm-lean), MIT); the
+- 2026-10-11: the Lean repository is now public ([principia-mathematica-lean](https://github.com/willmcginnis/principia-mathematica-lean), MIT); the
   README links it instead of calling it private. Its main branch covers ✱1–✱5 and ✱9–✱10, as described here.
 - 2026-10-11 (evening): our formalization-table row, its footnotes and the Lean section updated to the Lean
   repository's main branch `ac3fcf7` (adds ✱11, ✱12·1/✱12·11, ✱13 except ✱13·3, and parts of ✱14 and ✱20). The "Fits within PM"
@@ -642,3 +642,4 @@ under [CC0 1.0](LICENSE-DOCS). The Gutenberg text quoted in the errata lists is 
   (adds ✱14·3 as a schema, one theorem per instance, not as printed: its printed form takes propositions as apparent
   variables, and the formalization has no type of propositions): all 47 of ✱14's assertions proved, ✱11–✱14
   123/123/123 (✱14 9/38); Vol I 456 of 3,230 assertions proved.
+- 2026-10-12: the Lean repository was renamed principia-mathematica-lean; links updated (the old address redirects).
