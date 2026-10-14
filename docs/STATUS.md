@@ -15,7 +15,7 @@ The detailed status of the audit, moved here from the README on 2026-10-12. Term
 ✅ done · 🟡 partial / in progress · ⬜ not started · — not applicable
 
 *Lean formalization:* the companion Lean repository reports its own progress, in
-[docs/PROGRESS.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/ca7c91c/docs/PROGRESS.md) there. What it contributed to the text (✱1·4 and ✱4·42) is in
+[docs/PROGRESS.md](https://github.com/willmcginnis/principia-mathematica-lean/blob/caa4140/docs/PROGRESS.md) there. What it contributed to the text (✱1·4 and ✱4·42) is in
 [errata/vol1.md](../errata/vol1.md) and in the README's [Lean formalization](../README.md#lean-formalization) section.
 
 ## Details by volume
