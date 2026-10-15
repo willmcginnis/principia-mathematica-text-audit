@@ -32,4 +32,4 @@
 - **Deep embedding** (Lean section). PM's formulas are represented as a data type inside Lean, and every PM
   proposition counted is derived only from PM's own primitive propositions (the system also has an opt-in
   comprehension rule that no counted proposition uses; footnote 6 of the Lean repository's
-  [formalization comparison](https://github.com/willmcginnis/principia-mathematica-lean/blob/a31630c/docs/FORMALIZATION_COMPARISON.md)). Lean's logic is not used to prove PM's theorems directly.
+  [formalization comparison](https://github.com/willmcginnis/principia-mathematica-lean/blob/8b40786/docs/FORMALIZATION_COMPARISON.md)). Lean's logic is not used to prove PM's theorems directly.

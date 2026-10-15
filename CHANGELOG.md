@@ -3,6 +3,7 @@
 Newest first. Entries up to 2026-10-12 were moved here from the README; their text is unchanged, so their
 links and section names refer to the README as it was then. Earlier numbers are as of their date.
 
+- 2026-10-15: links to the Lean repository's docs moved to its new main, 8b40786 (the predicativity style takes the family of variables as a parameter).
 - 2026-10-15: links to the Lean repository's docs moved to its new main, a31630c (two independent kernel checkers in the release check, and the roadmap of the Lean-correctness track).
 - 2026-10-15: links to the Lean repository's docs moved to its new main, 8dbf6e2 (rulings on the ledger and on explicit premises, and a second comparison method for the statement mutation).
 - 2026-10-14: links to the Lean repository's docs moved to its new main, abbbcc1 (✱25 and the completed full statement-mutation run).
