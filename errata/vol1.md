@@ -625,7 +625,8 @@ not on this page yet.
   - **Print (1910):** `⊢ . ✱3·26 .   ⊃ ⊢ : p . q ∨ ∼q . ⊃ . p   (2)`. Line (2) cites ✱3·26.
   - **Ebook (#78050):** the same line, but its citation cell is empty: `⊢ . ✱3·26 .` is missing.
   - No published erratum touches p. 124 (neither the Vol I list nor the additional errata printed in Vols II
-    and III), so this is not an applied erratum. The 1925 second edition has not been checked.
+    and III), so this is not an applied erratum. A 1963 impression of the second edition (1925–27) prints the
+    same line, with ✱3·26 (its p. 119); we read this from a scan, and it is not part of the human check.
   - Status: confirmed by the human check (2026-10-11); not yet merged into the report.
 
 ## 5. New candidates from the body follow-up (2026-10-09/10) — confirmed by the human check
