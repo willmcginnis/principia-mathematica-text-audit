@@ -3,6 +3,7 @@
 Newest first. Entries up to 2026-10-12 were moved here from the README; their text is unchanged, so their
 links and section names refer to the README as it was then. Earlier numbers are as of their date.
 
+- 2026-10-18: links to the Lean repository's docs moved to its new main, d8ae7df (FIDELITY notes that the second edition prints ✱22·84–✱22·87 as the 1910 print does).
 - 2026-10-18: glyph-matching pilot numbers updated (it now agrees with the human answer on 176 of 193 items where it makes a pick; still not used for any count or list); the ✱4·42 entry notes that a 1963 impression of the second edition prints the same line (read from a scan, not part of the human check).
 - 2026-10-17: links to the Lean repository's docs moved to its new main, 9953b68 (FIDELITY notes that the second edition prints ✱4·32, ✱4·43 and ✱10·27 as the 1910 print does).
 - 2026-10-17: links to the Lean repository's docs moved to its new main, d9c53bb (the ✱2–✱5 proofs follow the proofs PM prints more closely).
